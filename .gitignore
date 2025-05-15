@@ -115,3 +115,6 @@ node_modules/
 
 # Docusaurus cache and generated files
 .docusaurus
+
+# Next.js cache and generated files
+.next
