@@ -3,23 +3,23 @@
 This document breaks down the PRD into actionable tasks for development. Each task includes a checkbox, description, and validation criteria.
 
 ## Project Setup
-- [ ] Initialize Next.js project with TypeScript
-  - Version: Next.js with React 18
+- [x] Setup Deno 2
+- [x] Initialize Next.js project with TypeScript
+  - Version: Next.js with React 19
   - Read/Reference: https://docs.deno.com/examples/next_tutorial/
   - Commands: [
       deno run -A npm:create-next-app@latest
       deno install
     ]
   - Validate: 
-    - `package.json` contains Next.js 14+ and React 18
+    - `package.json` contains Next.js 15+ and React 19
     - TypeScript configuration is properly set up
     - All required dependencies are installed
-- [ ] Configure BiomeJS
+- [x] Configure BiomeJS
   - Version: Latest stable
-  - Read/Reference: https://biomejs.dev/docs
+  - Read/Reference: https://biomejs.dev/guides/getting-started/
   - Commands: [
       deno run -A npm:biome
-      deno install
     ]
   - Validate:
     - Biome configuration file is created
