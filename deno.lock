@@ -9,6 +9,7 @@
     "npm:@types/node@20": "20.17.47",
     "npm:@types/react-dom@19": "19.1.5_@types+react@19.1.4",
     "npm:@types/react@19": "19.1.4",
+    "npm:lucide-react@0.511": "0.511.0_react@19.1.0",
     "npm:next@15.3.2": "15.3.2_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:react-dom@19": "19.1.0_react@19.1.0",
     "npm:react@19": "19.1.0",
@@ -819,6 +820,12 @@
         "lightningcss-win32-x64-msvc"
       ]
     },
+    "lucide-react@0.511.0_react@19.1.0": {
+      "integrity": "sha512-VK5a2ydJ7xm8GvBeKLS9mu1pVK6ucef9780JVUjw6bAjJL/QXnd4Y0p7SPeOUMC27YhzNCZvm5d/QX0Tp3rc0w==",
+      "dependencies": [
+        "react"
+      ]
+    },
     "magic-string@0.30.17": {
       "integrity": "sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==",
       "dependencies": [
@@ -999,6 +1006,7 @@
         "npm:@types/node@20",
         "npm:@types/react-dom@19",
         "npm:@types/react@19",
+        "npm:lucide-react@0.511",
         "npm:next@15.3.2",
         "npm:react-dom@19",
         "npm:react@19",
