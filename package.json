@@ -2,12 +2,6 @@
     "name": "mikechu.com",
     "version": "0.1.0",
     "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "deno run -A npm:@biomejs/biome check --write"
-    },
     "dependencies": {
         "clsx": "^2.1.1",
         "lucide-react": "^0.511.0",

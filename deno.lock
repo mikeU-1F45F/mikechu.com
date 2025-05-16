@@ -1004,6 +1004,14 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "npm:clsx@2.1.1",
+      "npm:lucide-react@0.511.0",
+      "npm:next@15.3.2",
+      "npm:react-dom@19.0.0",
+      "npm:react@19.0.0",
+      "npm:tailwind-merge@3.3.0"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:@biomejs/biome@^1.9.4",
