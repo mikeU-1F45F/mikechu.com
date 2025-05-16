@@ -6,7 +6,7 @@ This document breaks down the PRD into actionable tasks for development. Each ta
 - [x] Setup Deno 2
 - [x] Initialize Next.js project with TypeScript
   - Version: Next.js with React 19
-  - Read/Reference: https://docs.deno.com/examples/next_tutorial/
+  - Documentation: https://docs.deno.com/examples/next_tutorial/
   - Commands: [
       deno run -A npm:create-next-app@latest
       deno install
@@ -17,7 +17,7 @@ This document breaks down the PRD into actionable tasks for development. Each ta
     - All required dependencies are installed
 - [x] Configure BiomeJS
   - Version: Latest stable
-  - Read/Reference: https://biomejs.dev/guides/getting-started/
+  - Documentation: https://biomejs.dev/guides/getting-started/
   - Commands: [
       deno run -A npm:biome
     ]
@@ -28,27 +28,30 @@ This document breaks down the PRD into actionable tasks for development. Each ta
     - Prettier integration is disabled
 - [x] Set up Tailwind CSS configuration
   - Version: Tailwind CSS v4
+  - Documentation: https://tailwindcss.com/docs
   - Validate: 
     - Tailwind v4 configuration is complete
     - Custom theme configuration matches PRD color palette
     - PostCSS configuration is correct
 - [x] Configure Skeleton UI component library
   - Version: Skeleton UI v3
+  - Documentation: https://www.skeleton.dev/docs/get-started/introduction
   - Validate: 
     - Skeleton UI v3 is properly configured
     - Basic components render correctly with custom styling
     - Theme integration with Tailwind v4 is working
 - [x] Configure icon library
   - Version: Lucide Icons
+  - Documentation: https://lucide.dev/guide/packages/lucide-react
   - Validate:
     - Lucide Icons are properly installed
     - Icons are accessible in React components
     - Custom icon sizes and colors are supported
     - Icon system integrates with Tailwind CSS
-- [ ] Configure typography system
+- [x] Configure typography system
   - Version: Custom typography with system fonts
   - Validate:
-    - Windows 95: MS Sans Serif, Fixedsys, Courier New
+    - Past: Windows 95: MS Sans Serif, Fixedsys, Courier New
     - Present: Segoe UI, Ubuntu, Inter, SF Pro Text
     - Future: Eurostile, Space Grotesk, JetBrains Mono
     - All fonts are properly loaded and fall back gracefully
