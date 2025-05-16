@@ -379,4 +379,9 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
 - Social media integration for LinkedIn and other platforms
 - Consider headless CMS for easier content management
 - Analytics implementation to track user engagement with different eras
-- Setup for automated deployment via Vercel
+- Setup for automated deployment via Docker image
+
+
+## UI Prompt
+
+Act as an expert UI designer. Read the attached PRD project design document. Generate images that align with the creative brief and provide a conceptual finished product to present to the client for his website. You must follow the PRD brief. I expect to see images here in this chat showing the various parts of the portfolio website.
