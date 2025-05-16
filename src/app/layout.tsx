@@ -26,6 +26,7 @@ export default function RootLayout({
         <html data-theme="cerberus" lang="en">
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                suppressHydrationWarning
             >
                 {children}
             </body>
