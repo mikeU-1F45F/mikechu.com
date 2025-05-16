@@ -1,1 +1,1 @@
-export type Dino = { name: string; description: string };
+export type Era = 'past' | 'present' | 'future';

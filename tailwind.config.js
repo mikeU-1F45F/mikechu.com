@@ -6,6 +6,32 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        // Past Era (Windows 95)
+        past: {
+          primary: '#00807E',    // classic teal blue
+          secondary: '#C0C0C0',  // silver gray
+          accent1: '#008080',    // windows teal
+          accent2: '#FF0000',    // error red
+          accent3: '#FFA500'     // warning orange
+        },
+        // Present Era (Modern)
+        present: {
+          primary: '#171C28',    // deep blue-gray
+          secondary: '#0078D7',  // Windows 11 blue
+          accent1: '#67E480',    // terminal green
+          accent2: '#E83E8C',    // accent pink
+          accent3: '#FF8A00'     // alert orange
+        },
+        // Future Era (AI Integration)
+        future: {
+          primary: '#080C24',    // deep space
+          secondary: '#FFFFFF',  // pure white
+          accent1: '#00F0FF',    // electric cyan
+          accent2: '#FF00A0',    // neon magenta
+          accent3: '#7B00FF'     // electric purple
+        }
+      },
       fontFamily: {
         // Past Era (Windows 95)
         'ms-sans': ['"MS Sans Serif"', 'Arial', 'sans-serif'],
