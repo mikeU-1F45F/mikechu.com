@@ -6,7 +6,10 @@ WORKDIR /app
 # Copy application code
 COPY . .
 
-# Install dependencies and build the application
+# Cache dependencies first
+RUN deno install
+
+# Build the application
 RUN deno task build
 
 # Production stage

@@ -1,0 +1,49 @@
+# Version control
+.git
+.gitignore
+
+# Build artifacts
+.next
+node_modules
+out
+dist
+
+# Development files
+.vscode
+.devcontainer
+.github
+*.log
+npm-debug.log*
+
+# Environment files
+.env*
+!.env.example
+
+# Documentation
+README.md
+docs
+*.md
+
+# Testing
+__tests__
+*.test.*
+*.spec.*
+
+# Temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Docker files
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
