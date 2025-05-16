@@ -76,18 +76,14 @@ This document breaks down the PRD into actionable tasks for development. Each ta
     - Container size is optimized
 
 ## Core Infrastructure
-- [ ] Implement responsive layout system
+- [ ] Implement responsive layout
   - Validate: Layout adjusts correctly across all device sizes
-- [ ] Set up state management system
-  - Validate: URL-based era tracking and localStorage persistence work
 - [ ] Configure Framer Motion animations
   - Version: Framer Motion latest
   - Validate:
     - Smooth transitions between eras
     - Interactive animations for UI elements
     - Performance-optimized animations
-- [ ] Set up routing system
-  - Validate: Deep linking to specific eras works
 - [ ] Configure performance optimization
   - Validate:
     - Lazy loading for components
@@ -104,14 +100,12 @@ This document breaks down the PRD into actionable tasks for development. Each ta
   - Validate: Windows can be moved and resized
 - [ ] Create boot sequence animation
   - Validate: Smooth Windows 95 boot animation
-- [ ] Add Easter eggs (games, BSOD)
+- [ ] Add Easter eggs (BSOD)
   - Validate: Easter eggs are discoverable and functional
 - [ ] Implement Windows 95 sound effects
   - Validate: Authentic system sounds work
 - [ ] Add right-click context menus
   - Validate: Context menus match Windows 95 style
-- [ ] Create Clippy-style assistant
-  - Validate: Assistant provides helpful navigation tips
 - [ ] Create Windows 95 UI components
   - Validate: Authentic Windows 95 visual style
 - [ ] Implement Start Menu navigation
@@ -120,8 +114,6 @@ This document breaks down the PRD into actionable tasks for development. Each ta
   - Validate: Windows can be moved and resized
 - [ ] Create boot sequence animation
   - Validate: Smooth Windows 95 boot animation
-- [ ] Add Easter eggs (games, BSOD)
-  - Validate: Easter eggs are discoverable and functional
 
 ## Present Era (Modern Multi-Environment)
 - [ ] Set up split-screen layout
