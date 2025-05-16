@@ -5,16 +5,35 @@
 
 @source '../../node_modules/@skeletonlabs/skeleton-react/dist';
 
+/* Import typography system */
+@import '../styles/fonts.css';
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Past Era (Windows 95) Typography Variables */
+  --font-past-heading: 'MS Sans Serif', Arial, sans-serif;
+  --font-past-body: 'Fixedsys', monospace;
+  --font-past-code: 'Courier New', monospace;
+  
+  /* Present Era (Modern) Typography Variables */
+  --font-present-heading-windows: 'Segoe UI', system-ui, sans-serif;
+  --font-present-heading-linux: 'Ubuntu', system-ui, sans-serif;
+  --font-present-body: 'Inter', 'SF Pro Text', system-ui, sans-serif;
+  --font-present-code: 'Cascadia Code', 'Fira Code', monospace;
+  
+  /* Future Era (AI Integration) Typography Variables */
+  --font-future-heading: 'Eurostile', 'Industry', 'Orbitron', sans-serif;
+  --font-future-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-future-code: 'JetBrains Mono', monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-present-body);
+  --font-mono: var(--font-present-code);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,5 +46,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-present-body);
 }
