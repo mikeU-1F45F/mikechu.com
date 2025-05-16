@@ -23,8 +23,8 @@ COPY --from=builder /app/deno.json ./deno.json
 COPY --from=builder /app/deno.lock ./deno.lock
 
 # Set environment variables
-ENV NODE_ENV production
-ENV PORT 3000
+ENV NODE_ENV=production
+ENV PORT=3000
 
 # Expose the application port
 EXPOSE 3000
