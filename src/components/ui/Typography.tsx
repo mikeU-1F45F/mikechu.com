@@ -1,24 +1,24 @@
-import type React from 'react';
-import type { JSX } from 'react';
+import type { ReactNode, ElementType, ComponentPropsWithoutRef } from 'react';
+import { createElement } from 'react';
 import { cn } from '@/lib/utils';
 
 type Era = 'past' | 'present' | 'future';
 type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'code' | 'span';
 
-interface TypographyProps {
-  children: React.ReactNode;
+type TypographyProps<T extends ElementType> = {
+  children: ReactNode;
   era: Era;
   variant: TypographyVariant;
   className?: string;
-}
+} & ComponentPropsWithoutRef<T>;
 
-export function Typography({
+export function Typography<T extends ElementType = 'div'>({
   children,
   era,
   variant,
   className,
   ...props
-}: TypographyProps & React.HTMLAttributes<HTMLElement>) {
+}: TypographyProps<T>) {
   const isHeading = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(variant);
   const isCode = variant === 'code';
   
@@ -52,31 +52,29 @@ export function Typography({
     span: 'text-base',
   };
   
-  const Component = variant as keyof JSX.IntrinsicElements;
-  
   const typeClass = isHeading 
     ? eraClasses[era].heading 
     : isCode 
       ? eraClasses[era].code 
       : eraClasses[era].body;
   
-  return (
-    <Component
-      className={cn(typeClass, sizeClasses[variant], className)}
-      {...props}
-    >
-      {children}
-    </Component>
+  return createElement(
+    variant,
+    {
+      className: cn(typeClass, sizeClasses[variant], className),
+      ...props
+    },
+    children
   );
 }
 
 // Convenience components for each era
-export function PastTypography({
+export function PastTypography<T extends ElementType = 'div'>({
   children,
   variant,
   className,
   ...props
-}: Omit<TypographyProps, 'era'> & React.HTMLAttributes<HTMLElement>) {
+}: Omit<TypographyProps<T>, 'era'>) {
   return (
     <Typography era="past" variant={variant} className={className} {...props}>
       {children}
@@ -84,12 +82,12 @@ export function PastTypography({
   );
 }
 
-export function PresentTypography({
+export function PresentTypography<T extends ElementType = 'div'>({
   children,
   variant,
   className,
   ...props
-}: Omit<TypographyProps, 'era'> & React.HTMLAttributes<HTMLElement>) {
+}: Omit<TypographyProps<T>, 'era'>) {
   return (
     <Typography 
       era="present" 
@@ -102,12 +100,12 @@ export function PresentTypography({
   );
 }
 
-export function FutureTypography({
+export function FutureTypography<T extends ElementType = 'div'>({
   children,
   variant,
   className,
   ...props
-}: Omit<TypographyProps, 'era'> & React.HTMLAttributes<HTMLElement>) {
+}: Omit<TypographyProps<T>, 'era'>) {
   return (
     <Typography era="future" variant={variant} className={className} {...props}>
       {children}
