@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Dino } from "../types";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import type { Dino } from "../types";
 
 type RouteParams = { params: Promise<{ dinosaur: string }> };
 
@@ -12,8 +12,10 @@ export default function Dinosaur({ params }: RouteParams) {
 
     useEffect(() => {
         (async () => {
-            const resp = await fetch(`/api/dinosaurs/${await selectedDinosaur}`);
-            const dino = await resp.json() as Dino;
+            const resp = await fetch(
+                `/api/dinosaurs/${await selectedDinosaur}`,
+            );
+            const dino = (await resp.json()) as Dino;
             setDino(dino);
         })();
     }, []);
