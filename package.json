@@ -9,10 +9,12 @@
         "lint": "deno run -A npm:@biomejs/biome check --write"
     },
     "dependencies": {
+        "clsx": "^2.1.1",
         "lucide-react": "^0.511.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "next": "15.3.2"
+        "next": "15.3.2",
+        "tailwind-merge": "^3.3.0"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
