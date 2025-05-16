@@ -9,18 +9,18 @@ export default {
       fontFamily: {
         // Past Era (Windows 95)
         'ms-sans': ['"MS Sans Serif"', 'Arial', 'sans-serif'],
-        'fixedsys': ['Fixedsys', 'monospace'],
+        'vt323': ['VT323', 'monospace'],
         'courier-new': ['"Courier New"', 'monospace'],
         
         // Present Era (Modern)
-        'segoe': ['"Segoe UI"', 'system-ui', 'sans-serif'],
+        'roboto': ['Roboto', 'system-ui', 'sans-serif'],
         'ubuntu': ['Ubuntu', 'system-ui', 'sans-serif'],
         'inter': ['Inter', 'system-ui', 'sans-serif'],
         'sf-pro': ['"SF Pro Text"', 'system-ui', 'sans-serif'],
         'cascadia': ['"Cascadia Code"', '"Fira Code"', 'monospace'],
         
         // Future Era (AI Integration)
-        'eurostile': ['Eurostile', 'Industry', 'sans-serif'],
+        'eurostile': ['Orbitron', 'Audiowide', 'sans-serif'],
         'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
         'jetbrains': ['"JetBrains Mono"', 'monospace'],
       },

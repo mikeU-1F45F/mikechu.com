@@ -4,14 +4,12 @@ import { cn } from '@/lib/utils';
 
 type Era = 'past' | 'present' | 'future';
 type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'code' | 'span';
-type PresentHeadingVariant = 'windows' | 'linux';
 
 interface TypographyProps {
   children: React.ReactNode;
   era: Era;
   variant: TypographyVariant;
   className?: string;
-  presentVariant?: PresentHeadingVariant;
 }
 
 export function Typography({
@@ -19,7 +17,6 @@ export function Typography({
   era,
   variant,
   className,
-  presentVariant = 'windows',
   ...props
 }: TypographyProps & React.HTMLAttributes<HTMLElement>) {
   const isHeading = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(variant);
@@ -32,7 +29,7 @@ export function Typography({
       code: 'past-code',
     },
     present: {
-      heading: presentVariant === 'windows' ? 'present-heading-windows' : 'present-heading-linux',
+      heading: 'present-heading',
       body: 'present-body',
       code: 'present-code',
     },
@@ -91,7 +88,6 @@ export function PresentTypography({
   children,
   variant,
   className,
-  presentVariant = 'windows',
   ...props
 }: Omit<TypographyProps, 'era'> & React.HTMLAttributes<HTMLElement>) {
   return (
@@ -99,7 +95,6 @@ export function PresentTypography({
       era="present" 
       variant={variant} 
       className={className}
-      presentVariant={presentVariant}
       {...props}
     >
       {children}

@@ -13,8 +13,8 @@ export function TypographyDemo() {
           <PastTypography variant="h2">MS Sans Serif Heading 2</PastTypography>
           <PastTypography variant="h3">MS Sans Serif Heading 3</PastTypography>
           <PastTypography variant="p">
-            This is body text using Fixedsys font, which was common in Windows 95 era applications.
-            The typography system for this era uses authentic system fonts from that time period.
+            This is body text using VT323 font, which resembles the pixel fonts common in Windows 95 era applications.
+            The typography system for this era uses web fonts that capture the aesthetic of that time period.
           </PastTypography>
           <PastTypography variant="code">
             {"// This is code text using Courier New font\nfunction helloWindows95() {\n  console.log(\"Hello from Windows 95!\");\n}"}
@@ -26,24 +26,16 @@ export function TypographyDemo() {
       <section className="p-6 border border-[#0078D7] bg-[#171C28] text-white">
         <h2 className="text-2xl mb-4 font-bold">Present Era Typography (Modern)</h2>
         
-        <div className="space-y-4">
+        <div className="space-y-4">          
           <div className="mb-8">
-            <h3 className="text-xl mb-2">Windows Style</h3>
-            <PresentTypography variant="h1" presentVariant="windows">Segoe UI Heading 1</PresentTypography>
-            <PresentTypography variant="h2" presentVariant="windows">Segoe UI Heading 2</PresentTypography>
-            <PresentTypography variant="h3" presentVariant="windows">Segoe UI Heading 3</PresentTypography>
-          </div>
-          
-          <div className="mb-8">
-            <h3 className="text-xl mb-2">Linux Style</h3>
-            <PresentTypography variant="h1" presentVariant="linux">Ubuntu Heading 1</PresentTypography>
-            <PresentTypography variant="h2" presentVariant="linux">Ubuntu Heading 2</PresentTypography>
-            <PresentTypography variant="h3" presentVariant="linux">Ubuntu Heading 3</PresentTypography>
+            <PresentTypography variant="h1">Modern Heading 1</PresentTypography>
+            <PresentTypography variant="h2">Modern Heading 2</PresentTypography>
+            <PresentTypography variant="h3">Modern Heading 3</PresentTypography>
           </div>
           
           <PresentTypography variant="p">
-            This is body text using Inter or SF Pro Text fonts, which are modern, clean, and highly readable.
-            The typography system for this era uses contemporary system fonts that work well across platforms.
+            This is body text using Inter font, which is modern, clean, and highly readable.
+            The typography system for this era uses contemporary web fonts that work well across platforms.
           </PresentTypography>
           
           <PresentTypography variant="code">
@@ -57,9 +49,9 @@ export function TypographyDemo() {
         <h2 className="text-2xl mb-4 font-bold">Future Era Typography (AI Integration)</h2>
         
         <div className="space-y-4">
-          <FutureTypography variant="h1">Eurostile Heading 1</FutureTypography>
-          <FutureTypography variant="h2">Eurostile Heading 2</FutureTypography>
-          <FutureTypography variant="h3">Eurostile Heading 3</FutureTypography>
+          <FutureTypography variant="h1">Orbitron Heading 1</FutureTypography>
+          <FutureTypography variant="h2">Orbitron Heading 2</FutureTypography>
+          <FutureTypography variant="h3">Orbitron Heading 3</FutureTypography>
           <FutureTypography variant="p">
             This is body text using Space Grotesk font, which has a futuristic yet readable design.
             The typography system for this era uses fonts that convey a sense of advanced technology and AI integration.

@@ -14,17 +14,16 @@
   
   /* Past Era (Windows 95) Typography Variables */
   --font-past-heading: 'MS Sans Serif', Arial, sans-serif;
-  --font-past-body: 'Fixedsys', monospace;
+  --font-past-body: 'VT323', monospace;
   --font-past-code: 'Courier New', monospace;
   
   /* Present Era (Modern) Typography Variables */
-  --font-present-heading-windows: 'Segoe UI', system-ui, sans-serif;
-  --font-present-heading-linux: 'Ubuntu', system-ui, sans-serif;
+  --font-present-heading: 'Roboto', 'Ubuntu', system-ui, sans-serif;
   --font-present-body: 'Inter', 'SF Pro Text', system-ui, sans-serif;
   --font-present-code: 'Cascadia Code', 'Fira Code', monospace;
   
   /* Future Era (AI Integration) Typography Variables */
-  --font-future-heading: 'Eurostile', 'Industry', 'Orbitron', sans-serif;
+  --font-future-heading: 'Orbitron', 'Audiowide', sans-serif;
   --font-future-body: 'Space Grotesk', system-ui, sans-serif;
   --font-future-code: 'JetBrains Mono', monospace;
 }

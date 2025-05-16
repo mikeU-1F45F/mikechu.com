@@ -5,90 +5,50 @@
 
 /* ---------- PAST ERA (Windows 95) ---------- */
 
-/* MS Sans Serif */
+/* MS Sans Serif - Using web font version */
 @font-face {
   font-family: 'MS Sans Serif';
-  src: url('/fonts/ms-sans-serif.woff2') format('woff2');
+  src: url('https://unpkg.com/98.css@0.1.18/dist/ms_sans_serif.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-/* Fixedsys */
-@font-face {
-  font-family: 'Fixedsys';
-  src: url('/fonts/fixedsys.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Using VT323 as a replacement for Fixedsys */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /* Courier New is a system font, no need to import */
 
 /* ---------- PRESENT ERA (Modern) ---------- */
 
-/* Segoe UI and Ubuntu are system fonts, fallbacks will be used if not available */
+/* Ubuntu is a system font, fallback will be used if not available */
+/* Using Roboto as a replacement for Segoe UI */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* Inter */
-@font-face {
-  font-family: 'Inter';
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* SF Pro Text - Using system font stack as fallback */
 
 /* Cascadia Code */
-@font-face {
-  font-family: 'Cascadia Code';
-  src: url('https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/files/cascadia-code-latin-400-normal.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.css');
 
 /* Fira Code */
-@font-face {
-  font-family: 'Fira Code';
-  src: url('https://cdn.jsdelivr.net/npm/@fontsource/fira-code@4.5.13/files/fira-code-latin-400-normal.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/fira-code@4.5.13/index.css');
 
 /* ---------- FUTURE ERA (AI Integration) ---------- */
 
-/* Eurostile */
-@font-face {
-  font-family: 'Eurostile';
-  src: url('/fonts/eurostile.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 
-/* Industry - Fallback for Eurostile */
-@font-face {
-  font-family: 'Industry';
-  src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
-  font-display: swap;
-}
+/* Audiowide */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 /* Space Grotesk */
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 /* JetBrains Mono */
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@4.5.11/files/jetbrains-mono-latin-400-normal.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@4.5.11/index.css');
 
 /* Typography Utility Classes */
 
@@ -99,7 +59,7 @@
 }
 
 .past-body {
-  font-family: 'Fixedsys', monospace;
+  font-family: 'VT323', monospace;
 }
 
 .past-code {
@@ -107,12 +67,8 @@
 }
 
 /* Present Era Typography */
-.present-heading-windows {
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-
-.present-heading-linux {
-  font-family: 'Ubuntu', system-ui, sans-serif;
+.present-heading {
+  font-family: 'Roboto', 'Ubuntu', system-ui, sans-serif;
 }
 
 .present-body {
@@ -125,7 +81,7 @@
 
 /* Future Era Typography */
 .future-heading {
-  font-family: 'Eurostile', 'Industry', 'Orbitron', sans-serif;
+  font-family: 'Orbitron', 'Audiowide', sans-serif;
   letter-spacing: 0.05em;
 }
 
