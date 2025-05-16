@@ -1,1 +1,1 @@
-export type Era = 'past' | 'present' | 'future';
+export type Era = "past" | "present" | "future";
