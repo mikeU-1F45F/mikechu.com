@@ -76,8 +76,10 @@ This document breaks down the PRD into actionable tasks for development. Each ta
     - Container size is optimized
 
 ## Core Infrastructure
-- [ ] Implement responsive layout
-  - Validate: Layout adjusts correctly across all device sizes
+- [ ] Implement responsive containing layout. You must read the layout specification document for details [layout-specification.md](layout-specification.md). You must not implment any era-specific layouts or components in this step.
+  - Validate: User/Human to review adjusts correctly across all device sizes
+- [ ] Implement era-specific layouts and components. You must read the layout specification document for details [layout-specification.md](layout-specification.md)
+  - Validate: User/Human to review era-specific layouts and components are correct
 - [ ] Configure Framer Motion animations
   - Version: Framer Motion latest
   - Validate:
