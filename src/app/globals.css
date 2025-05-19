@@ -3,7 +3,8 @@
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/cerberus';
 
-@source '../../node_modules/@skeletonlabs/skeleton-react/dist';
+/* Skeleton React components */
+@import '../../node_modules/@skeletonlabs/skeleton-react/dist/index.css';
 
 /* Import typography system */
 @import '../styles/fonts.css';
@@ -26,9 +27,27 @@
   --font-future-heading: 'Orbitron', 'Audiowide', sans-serif;
   --font-future-body: 'Space Grotesk', system-ui, sans-serif;
   --font-future-code: 'JetBrains Mono', monospace;
+  
+  /* Era Theme Colors */
+  /* Past Era Colors (Windows 95 Theme) */
+  --past-primary: #008080; /* Teal */
+  --past-secondary: #c0c0c0; /* Silver */
+  --past-accent: #000080; /* Navy */
+  
+  /* Present Era Colors (Modern Theme) */
+  --present-primary: #2d3748; /* Slate Gray */
+  --present-secondary: #4299e1; /* Blue */
+  --present-accent: #48bb78; /* Green */
+  
+  /* Future Era Colors (AI Theme) */
+  --future-primary: #1a202c; /* Dark Blue Gray */
+  --future-secondary: #805ad5; /* Purple */
+  --future-accent1: #f687b3; /* Pink */
+  --future-accent2: #4fd1c5; /* Teal */
 }
 
-@theme inline {
+/* Theme variables */
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-present-body);
@@ -46,4 +65,47 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-present-body);
+}
+
+/* Accessibility Styles */
+
+/* Reduced Motion Mode */
+.reduced-motion * {
+  transition-duration: 0.05s !important;
+  animation-duration: 0.05s !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --past-primary-contrast: #00b3b0;
+  --present-primary-contrast: #ffffff;
+  --future-primary-contrast: #ffffff;
+  --contrast-bg: #000000;
+  --contrast-text: #ffffff;
+  --contrast-border: #ffffff;
+}
+
+.high-contrast body {
+  background: var(--contrast-bg);
+  color: var(--contrast-text);
+}
+
+.high-contrast .bg-past-primary {
+  background-color: var(--contrast-bg);
+  color: var(--past-primary-contrast);
+  border: 1px solid var(--past-primary-contrast);
+}
+
+.high-contrast .bg-present-primary {
+  background-color: var(--contrast-bg);
+  color: var(--present-primary-contrast);
+  border: 1px solid var(--present-primary-contrast);
+}
+
+.high-contrast .bg-future-primary {
+  background-color: var(--contrast-bg);
+  color: var(--future-primary-contrast);
+  border: 1px solid var(--future-primary-contrast);
 }

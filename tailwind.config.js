@@ -6,30 +6,28 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'glow': '0 0 8px rgba(255, 255, 255, 0.7)',
+      },
       colors: {
         // Past Era (Windows 95)
         past: {
-          primary: '#00807E',    // classic teal blue
-          secondary: '#C0C0C0',  // silver gray
-          accent1: '#008080',    // windows teal
-          accent2: '#FF0000',    // error red
-          accent3: '#FFA500'     // warning orange
+          primary: 'var(--past-primary)',      // teal
+          secondary: 'var(--past-secondary)',  // silver gray
+          accent: 'var(--past-accent)'         // navy
         },
         // Present Era (Modern)
         present: {
-          primary: '#171C28',    // deep blue-gray
-          secondary: '#0078D7',  // Windows 11 blue
-          accent1: '#67E480',    // terminal green
-          accent2: '#E83E8C',    // accent pink
-          accent3: '#FF8A00'     // alert orange
+          primary: 'var(--present-primary)',    // slate gray
+          secondary: 'var(--present-secondary)', // blue
+          accent: 'var(--present-accent)'        // green
         },
         // Future Era (AI Integration)
         future: {
-          primary: '#080C24',    // deep space
-          secondary: '#FFFFFF',  // pure white
-          accent1: '#00F0FF',    // electric cyan
-          accent2: '#FF00A0',    // neon magenta
-          accent3: '#7B00FF'     // electric purple
+          primary: 'var(--future-primary)',     // dark blue gray
+          secondary: 'var(--future-secondary)',  // purple
+          accent1: 'var(--future-accent1)',      // pink
+          accent2: 'var(--future-accent2)'       // teal
         }
       },
       fontFamily: {
