@@ -1,13 +1,27 @@
 @import "tailwindcss";
-@import '@skeletonlabs/skeleton';
-@import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/cerberus';
 
-/* Skeleton React components */
-@import '../../node_modules/@skeletonlabs/skeleton-react/dist/index.css';
-
-/* Import typography system */
-@import '../styles/fonts.css';
+:root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Era Theme Colors */
+  /* Past Era Colors (Windows 95 Theme) */
+  --past-primary: #008080; /* Teal */
+  --past-secondary: #c0c0c0; /* Silver */
+  --past-accent: #000080; /* Navy */
+  
+  /* Present Era Colors (Modern Theme) */
+  --present-primary: #2d3748; /* Slate Gray */
+  --present-secondary: #4299e1; /* Blue */
+  --present-accent: #48bb78; /* Green */
+  
+  /* Future Era Colors (AI Theme) */
+  --future-primary: #1a202c; /* Dark Blue Gray */
+  --future-secondary: #805ad5; /* Purple */
+  --future-accent1: #f687b3; /* Pink */
+  --future-accent2: #4fd1c5; /* Teal */
+}
 
 :root {
   --background: #ffffff;

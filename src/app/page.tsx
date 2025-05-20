@@ -51,7 +51,7 @@ export default function Home() {
     // but only make interactive elements visible after mounting
     
     return (
-        <main className="relative min-h-screen w-full overflow-hidden">
+        <main className="relative overflow-hidden" style={{ width: '100vw', height: '100vh', margin: 0, padding: 0 }}>
             <ContainerLayout>
                 <EraContainer
                     initialEra={currentEra}
@@ -62,8 +62,17 @@ export default function Home() {
                     <EraSection 
                         era="past" 
                         isActive={currentEra === "past"}
-                        className="bg-past-primary text-white"
-                        style={{ backgroundColor: 'var(--past-primary)' }}
+                        className="text-white"
+                        style={{ 
+                            backgroundColor: '#008080',
+                            minHeight: '100vh',
+                            width: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            padding: '2rem'
+                        }}
                     >
                         <div className="min-h-screen w-full flex flex-col items-center justify-center gap-8">
                             <div className="max-w-4xl mx-auto text-center">
@@ -93,8 +102,17 @@ export default function Home() {
                     <EraSection 
                         era="present" 
                         isActive={currentEra === "present"}
-                        className="bg-present-primary text-white"
-                        style={{ backgroundColor: 'var(--present-primary)' }}
+                        className="text-white"
+                        style={{ 
+                            backgroundColor: '#2d3748',
+                            minHeight: '100vh',
+                            width: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            padding: '2rem'
+                        }}
                     >
                         <div className="min-h-screen w-full flex flex-col items-center justify-center gap-8">
                             <div className="max-w-4xl mx-auto text-center">
@@ -124,12 +142,20 @@ export default function Home() {
                     <EraSection 
                         era="future" 
                         isActive={currentEra === "future"}
-                        className="bg-future-primary text-white"
-                        style={{ backgroundColor: 'var(--future-primary)' }}
+                        className="text-white"
+                        style={{ 
+                            backgroundColor: '#1a202c',
+                            minHeight: '100vh',
+                            width: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            padding: '2rem'
+                        }}
                     >
                         <div className="min-h-screen w-full flex flex-col items-center justify-center gap-8">
                             <div className="max-w-4xl mx-auto text-center">
-                                <FutureTypography variant="h1" className="mb-6 text-future-accent1">AI Integration Era</FutureTypography>
                                 <FutureTypography variant="p" className="mb-8 max-w-2xl mx-auto">
                                     Discover Mike's vision for the future of technology with AI integration and advanced interfaces, representing the next frontier of his technological journey.
                                 </FutureTypography>
