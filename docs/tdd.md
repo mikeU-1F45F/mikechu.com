@@ -1,4 +1,4 @@
-# Portfolio Website Layout Specification
+# Portfolio Website Technical Design Document (TDD)
 
 ## Overall Structure: Era-Based Vertical Journey with Virtual Desktop Elements
 
