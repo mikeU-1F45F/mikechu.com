@@ -1,4 +1,4 @@
-# Mike Chu Portfolio Website Creation Prompt
+# Mike Chu Portfolio Website Project Requirements Document (PRD)
 
 ## AI Assistant Prompt
 
