@@ -240,6 +240,7 @@ a {
   justify-content: center;
   gap: var(--space-md);
   padding: var(--space-md);
+  flex-wrap: wrap;
 }
 
 .era-nav__button {
@@ -266,6 +267,16 @@ a {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+.era-nav__button--toggle {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  margin-left: var(--space-md);
+}
+
+.era-nav__button--toggle[aria-pressed="true"] {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
 
 .era-nav__icon {
@@ -299,6 +310,14 @@ a {
   min-height: calc(100vh - 80px);
 }
 
+/* Scroll mode container styles */
+.scroll-mode .era-container {
+  display: block;
+  height: auto;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
 .era {
   min-height: 100vh;
   display: none;
@@ -308,6 +327,25 @@ a {
 
 .era--active {
   display: block;
+}
+
+/* Scroll mode styles */
+.scroll-mode .era {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+.era--scroll-mode {
+  display: block;
+  position: relative;
+}
+
+/* When in scroll mode, fix era transitions */
+.scroll-mode .era-transition {
+  display: block;
+  position: relative;
 }
 
 /* =============================================================================

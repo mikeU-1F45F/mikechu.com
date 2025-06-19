@@ -7,6 +7,7 @@
 const PortfolioApp = {
   currentEra: 'past',
   isTransitioning: false,
+  isScrollMode: false, // Flag to determine if we're in scroll mode
   
   // DOM elements cache
   elements: {
@@ -18,7 +19,8 @@ const PortfolioApp = {
     desktopIcons: null,
     windows: null,
     taskbarTasks: null,
-    currentYearSpan: null
+    currentYearSpan: null,
+    scrollToggleBtn: null
   },
 
   // Initialize the application
@@ -27,6 +29,7 @@ const PortfolioApp = {
     this.bindEvents();
     this.updateCopyright();
     this.setupInitialState();
+    this.detectScrollMode();
     console.log('Portfolio App initialized');
   },
 
@@ -41,6 +44,7 @@ const PortfolioApp = {
     this.elements.windows = document.querySelectorAll('.window');
     this.elements.taskbarTasks = document.querySelectorAll('.taskbar__task');
     this.elements.currentYearSpan = document.getElementById('current-year');
+    this.elements.scrollToggleBtn = document.getElementById('scroll-toggle');
   },
 
   // Bind all event listeners
@@ -50,7 +54,18 @@ const PortfolioApp = {
       button.addEventListener('click', (e) => {
         e.preventDefault();
         const targetButton = e.currentTarget; // Use currentTarget to get the button, not the clicked element inside
-        this.switchEra(targetButton.dataset.era);
+        
+        if (this.isScrollMode) {
+          // In scroll mode, smoothly scroll to the era section
+          const eraId = `era-${targetButton.dataset.era}`;
+          const eraElement = document.getElementById(eraId);
+          if (eraElement) {
+            eraElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          // In regular mode, use the era switching mechanism
+          this.switchEra(targetButton.dataset.era);
+        }
       });
     });
 
@@ -138,6 +153,30 @@ const PortfolioApp = {
     this.updateEraNavigation();
     this.updateProgressBar();
   },
+  
+  // Detect if we should use scroll mode based on URL parameters
+  detectScrollMode() {
+    // Check for scroll mode in URL parameters or localStorage
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrollParam = urlParams.get('scroll');
+    
+    if (scrollParam === 'true' || localStorage.getItem('preferScrollMode') === 'true') {
+      this.isScrollMode = true;
+      document.body.classList.add('scroll-mode');
+      
+      // In scroll mode, make all eras visible for scrolling
+      this.elements.eras.forEach(era => {
+        era.classList.add('era--scroll-mode');
+      });
+      
+      console.log('Scroll mode activated');
+    }
+    
+    // Update toggle button if it exists
+    if (this.elements.scrollToggleBtn) {
+      this.elements.scrollToggleBtn.setAttribute('aria-pressed', this.isScrollMode.toString());
+    }
+  },
 
   // Update copyright year
   updateCopyright() {
@@ -154,7 +193,9 @@ const PortfolioApp = {
     this.currentEra = targetEra;
     
     // Update URL hash for shareable links
-    history.pushState(null, null, `#${targetEra}`);
+    if (!this.isScrollMode) {
+      history.pushState(null, null, `#${targetEra}`);
+    }
     
     // Hide all eras
     this.elements.eras.forEach(era => {
@@ -353,6 +394,17 @@ function handleUrlHash() {
   
   if (validEras.includes(hash)) {
     PortfolioApp.currentEra = hash;
+    
+    // In scroll mode, scroll to the appropriate section
+    if (PortfolioApp.isScrollMode) {
+      const eraElement = document.getElementById(`era-${hash}`);
+      if (eraElement) {
+        // Use requestAnimationFrame to ensure DOM is fully ready
+        requestAnimationFrame(() => {
+          eraElement.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    }
   }
 }
 
@@ -367,7 +419,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle browser back/forward
   window.addEventListener('popstate', () => {
     handleUrlHash();
-    PortfolioApp.switchEra(PortfolioApp.currentEra);
+    
+    if (!PortfolioApp.isScrollMode) {
+      PortfolioApp.switchEra(PortfolioApp.currentEra);
+    }
   });
   
   // Add reduced motion class if user prefers it

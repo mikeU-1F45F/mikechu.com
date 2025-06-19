@@ -1,0 +1,219 @@
+/* =============================================================================
+   ERA TRANSITIONS
+   Handles smooth transitions between Past, Present, and Future eras
+   ============================================================================= */
+
+/* Base transition properties for all eras */
+.era {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: 
+    opacity var(--duration-slower) var(--easing-era),
+    visibility var(--duration-slower) var(--easing-era),
+    transform var(--duration-slower) var(--easing-era);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform, opacity;
+}
+
+/* Active era state */
+.era--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Era-specific entrance/exit animations */
+.era--past {
+  transform: translateY(0);
+}
+
+.era--present {
+  transform: translateY(100vh);
+}
+
+.era--future {
+  transform: translateY(200vh);
+}
+
+/* Active era positioning */
+.era--past.era--active {
+  transform: translateY(0);
+}
+
+.era--present.era--active {
+  transform: translateY(0);
+}
+
+.era--future.era--active {
+  transform: translateY(0);
+}
+
+/* Transition zones between eras */
+.era-transition {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Transition from Past to Present */
+.era-transition--past-to-present {
+  background: linear-gradient(to bottom, var(--past-bg-desktop), var(--present-primary));
+}
+
+.boot-sequence {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  color: var(--past-text-inverse);
+}
+
+.boot-sequence__logo {
+  margin-bottom: var(--space-xl);
+  font-size: var(--font-size-4xl);
+}
+
+.boot-sequence__progress {
+  width: 100%;
+  height: 24px;
+  background-color: var(--past-bg);
+  border: 2px solid var(--past-border-light);
+  border-right-color: var(--past-border-dark);
+  border-bottom-color: var(--past-border-dark);
+  margin-bottom: var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.boot-sequence__progress-bar {
+  height: 100%;
+  background-color: var(--past-accent-teal);
+  width: 0%;
+  transition: width 3s linear;
+}
+
+.boot-sequence__text {
+  font-family: var(--font-family-past-body);
+  margin-top: var(--space-md);
+}
+
+/* Transition from Present to Future */
+.era-transition--present-to-future {
+  background: linear-gradient(to bottom, var(--present-bg-dark), var(--future-primary));
+}
+
+.digital-transformation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--future-text);
+}
+
+.digital-transformation__container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.digital-transformation__title {
+  font-family: var(--font-family-future-heading);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-lg);
+  color: var(--future-accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.digital-transformation__subtitle {
+  font-family: var(--font-family-future-body);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xl);
+  color: var(--future-text);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Particle canvas for the future transition */
+.particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 50%;
+  right: var(--space-md);
+  transform: translateY(-50%);
+  height: 150px;
+  width: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  z-index: var(--z-fixed);
+}
+
+.scroll-progress__indicator {
+  width: 100%;
+  height: 33.33%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-full);
+  position: absolute;
+  top: 0;
+  transition: top 0.3s var(--easing-ease);
+}
+
+/* Adjust for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .era {
+    transition: 
+      opacity 0.1s linear,
+      visibility 0.1s linear;
+  }
+  
+  .boot-sequence__progress-bar {
+    transition: width 0.5s linear;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .boot-sequence,
+  .digital-transformation__container {
+    width: 90%;
+  }
+  
+  .boot-sequence__logo {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .digital-transformation__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .digital-transformation__subtitle {
+    font-size: var(--font-size-base);
+  }
+}

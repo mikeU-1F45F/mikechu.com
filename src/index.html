@@ -25,6 +25,7 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/era-transitions.css" />
 
         <!-- Favicon -->
         <link
@@ -33,46 +34,6 @@
         />
     </head>
     <body>
-        <!-- Skip to main content for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-
-        <!-- Era Navigation -->
-        <nav class="era-nav" role="navigation" aria-label="Era navigation">
-            <div class="era-nav__container">
-                <button
-                    class="era-nav__button era-nav__button--active"
-                    data-era="past"
-                    aria-label="Navigate to Past era"
-                >
-                    <span class="era-nav__icon">🖥️</span>
-                    <span class="era-nav__label">Past</span>
-                </button>
-                <button
-                    class="era-nav__button"
-                    data-era="present"
-                    aria-label="Navigate to Present era"
-                >
-                    <span class="era-nav__icon">💻</span>
-                    <span class="era-nav__label">Present</span>
-                </button>
-                <button
-                    class="era-nav__button"
-                    data-era="future"
-                    aria-label="Navigate to Future era"
-                >
-                    <span class="era-nav__icon">🚀</span>
-                    <span class="era-nav__label">Future</span>
-                </button>
-            </div>
-            <div
-                class="era-nav__progress"
-                role="progressbar"
-                aria-label="Era navigation progress"
-            >
-                <div class="era-nav__progress-bar"></div>
-            </div>
-        </nav>
-
         <!-- Main Content Container -->
         <main id="main-content" class="era-container" role="main">
             <!-- PAST ERA: Windows 95 -->
@@ -80,6 +41,7 @@
                 class="era era--past era--active"
                 id="era-past"
                 data-era="past"
+                aria-label="Past Era - Windows 95 Interface"
             >
                 <div class="windows95-desktop">
                     <div class="windows95-wallpaper"></div>
@@ -302,11 +264,32 @@
                 </div>
             </section>
 
+            <!-- Transition: Past to Present -->
+            <section
+                class="era-transition era-transition--past-to-present"
+                id="transition-past-present"
+                aria-label="Transition from Past to Present Era"
+            >
+                <div class="boot-sequence">
+                    <div class="boot-sequence__logo">🚀</div>
+                    <div class="boot-sequence__progress">
+                        <div
+                            class="boot-sequence__progress-bar"
+                            id="boot-progress-bar"
+                        ></div>
+                    </div>
+                    <div class="boot-sequence__text">
+                        Loading modern environment...
+                    </div>
+                </div>
+            </section>
+
             <!-- PRESENT ERA: Modern Multi-Environment -->
             <section
                 class="era era--present"
                 id="era-present"
                 data-era="present"
+                aria-label="Present Era - Modern Interface"
             >
                 <div class="modern-interface">
                     <!-- Hero Section -->
@@ -616,8 +599,33 @@
                 </div>
             </section>
 
+            <!-- Transition: Present to Future -->
+            <section
+                class="era-transition era-transition--present-to-future"
+                id="transition-present-future"
+                aria-label="Transition from Present to Future Era"
+            >
+                <canvas class="particles-canvas" id="particles-canvas"></canvas>
+                <div class="digital-transformation">
+                    <div class="digital-transformation__container">
+                        <h2 class="digital-transformation__title">
+                            Entering Future
+                        </h2>
+                        <p class="digital-transformation__subtitle">
+                            Transitioning to advanced AI-integrated interfaces
+                            and next-generation experiences
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             <!-- FUTURE ERA: AI Integration -->
-            <section class="era era--future" id="era-future" data-era="future">
+            <section
+                class="era era--future"
+                id="era-future"
+                data-era="future"
+                aria-label="Future Era - AI Interface"
+            >
                 <div class="ai-interface">
                     <div class="ai-grid">
                         <!-- Neural Network Visualization -->
@@ -743,6 +751,11 @@
             </section>
         </main>
 
+        <!-- Scroll Progress Indicator -->
+        <div class="scroll-progress" aria-hidden="true">
+            <div class="scroll-progress__indicator" id="scroll-indicator"></div>
+        </div>
+
         <!-- Footer -->
         <footer class="footer" role="contentinfo">
             <div class="container">
@@ -779,5 +792,6 @@
 
         <!-- Scripts -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/scroll-animations.js"></script>
     </body>
 </html>
