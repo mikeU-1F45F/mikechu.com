@@ -3,12 +3,12 @@
 ## Phase 1: Project Setup & Foundation
 
 - [x] Set up project repository
-- [ ] Configure static site hosting (Cloudflare Page)
-- [ ] Set up local development environment with Live Server using Deno2 and npm:live-server
-- [ ] Create basic HTML structure with proper semantic markup
-- [ ] Set up CSS styling infrastructure with vanilla CSS
-- [ ] Create responsive grid/flexbox layout foundation
-- [ ] Implement base typography system
+- [x] Configure static site hosting (Cloudflare Page)
+- [x] Set up local development environment with Live Server using Deno2 and npm:live-server
+- [x] Create basic HTML structure with proper semantic markup
+- [x] Set up CSS styling infrastructure with vanilla CSS
+- [x] Create responsive grid/flexbox layout foundation
+- [x] Implement base typography system
 
 ## Phase 2: Core Structure & Layout Implementation
 
