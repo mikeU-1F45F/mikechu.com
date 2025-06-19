@@ -1,36 +1,37 @@
 # Portfolio Website Layout Specification
 
-## Overall Structure: Era-Based Spatial Navigation with Virtual Desktop Elements
+## Overall Structure: Era-Based Vertical Journey with Virtual Desktop Elements
 
-The website will feature three distinct eras (Past, Present, Future) implemented as horizontal "virtual desktops" with scroll-locking between them. Each era will have its own vertical scrolling content and era-specific UI elements. This layout supports Mike Chu's professional brand identity of "Bridging Technology and Human Connection" by creating a chronological journey through his 25-year career in technology.
+The website will feature three distinct eras (Past, Present, Future) implemented as a continuous vertical scroll where each era appears sequentially as the user scrolls down the page. Each era will maintain its unique styling and era-specific UI elements. This layout supports Mike Chu's professional brand identity of "Bridging Technology and Human Connection" by creating a chronological journey through his 25-year career in technology. For detailed professional background information, refer to the [resume](./resume.md).
 
 ### Navigation System
 
-1. **Horizontal Era Navigation**
+1. **Vertical Era Progression**
 
-   - Horizontal scroll-locking between three main eras
-   - Smooth transitions with Framer Motion animations when switching eras
-   - Visual indicators showing current era and navigation options
-   - Keyboard shortcuts: Arrow Left/Right to switch eras
-   - Touch gestures: Swipe left/right to navigate between eras
-   - Era transition includes appropriate boot sequence animations
-   - URL tracking of current era for shareable deep links
+   - Single continuous vertical scrolling experience
+   - Each era flows into the next as the user scrolls down
+   - Smooth animated transitions between eras as they enter/exit viewport
+   - Keyboard shortcuts: Page Up/Down, Home/End for faster navigation
+   - Era transition effects triggered by scroll position
+   - URL tracking of current era for shareable deep links using #era-name
+   - No navigation menu is to be provided requiring scrolling to navigate between eras.
+   - Floating button in the bottom-right corner for quick access to contact information implemented via an HTML modal
 
-2. **Vertical Content Scrolling**
-   - Each era allows independent vertical scrolling
+2. **Era-Based Content Sections**
    - Sections within each era are arranged vertically
    - Smooth scroll animations between sections
    - Scroll progress indicator visible on the side
    - Scroll-triggered animations using CSS v4 features
    - Parallax scrolling effects for depth
+   - Lazy loading of era assets when approaching viewport using HTMX to load below the fold content
 
 ### Era-Specific Layouts
 
 1. **Past Era (Windows 95)**
 
    - Base: Authentic Windows 95 desktop environment with wallpaper background
-   - Navigation: Start Menu in bottom-left corner with taskbar
-   - Content Display: Draggable windows containing different content sections
+   - Navigation: Start Menu in bottom-left corner with taskbar which should animate opening and displaying information
+     windows as the user scrolls
    - Technologies for UI Inspiration:
      - .NET C# (Visual Studio icons and interfaces)
      - PHP (Logo and syntax highlighting)
@@ -39,7 +40,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - SQL (Database icons and query interfaces)
      - IIS (Server management console aesthetics)
      - HTML+CSS+JS (Early web page styling and Notepad++ interface)
-   - Industries for Content Themes:
+   - Industries for Content Themes (based on early career in [resume](./resume.md)):
      - Government (Official seals and document styles)
      - Telecomm (Network diagrams and connection visuals)
      - Marketing (Early digital ad formats and campaign visuals)
@@ -58,7 +59,6 @@ The website will feature three distinct eras (Past, Present, Future) implemented
    - Micro-interactions:
      - Windows minimize/maximize/close buttons
      - Start menu expansion
-     - Window dragging and stacking
      - System sounds on interaction
      - Boot sequence mimicking vintage Windows 95 loading screen
      - "My Computer" icon browsing early projects and skills
@@ -69,7 +69,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
    - Base: Split-screen effect showing Kali Linux and Windows 11 environments
    - Navigation: Floating navigation menu with modern OS-inspired elements
    - Content Display: Card-based content modules with smooth transitions
-   - Technologies for UI Inspiration:
+   - Technologies for UI Inspiration (aligned with skills in [resume](./resume.md)):
      - .NET C# (Modern Visual Studio interface elements and .NET 8 branding)
      - Python (Python logo, Jupyter notebook interfaces, and Anaconda environments)
      - TypeScript (TS logo, VSCode editor themes, and type definition visuals)
@@ -78,6 +78,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Docker & Kubernetes (Container visualizations, orchestration diagrams, and logos)
    - Industries for Content Themes:
      - Marketing Technology (MarTech stack visualizations and campaign analytics dashboards)
+     - Education Technology (reflecting experience at Penn Foster/Ashworth College)
    - Color Palette:
      - Primary: #171C28 (deep navy)
      - Secondary: #0078D7 (windows blue)
@@ -101,7 +102,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
    - Base: Minimalist, dark interface with holographic and glowing elements
    - Navigation: Gesture-based or voice-activated
    - Content Display: Floating panels that respond to user interaction
-   - Technologies for UI Inspiration:
+   - Technologies for UI Inspiration (based on future-focused technologies in [resume](./resume.md)):
      - Machine Learning (ML) (Neural network visualizations, model architecture diagrams, and training graphs)
      - Natural Language Processing (NLP) (Text processing visualizations, semantic networks, and language models)
      - Agent2Agent Protocol (A2A) (Agent communication flows and protocol visualizations)
@@ -134,31 +135,46 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 
 ### Responsive Behavior
 
-- **Desktop**: Full horizontal era navigation with rich interactions
-- **Tablet**: Maintained horizontal era navigation with simplified interactions
-- **Mobile**: Option to switch to vertical stacking of eras with clear era transitions
+- **Desktop**: Full vertical scrolling experience with rich interactions
+
+  - Full-fidelity era designs with all interactive elements
+  - Detailed transition animations between eras
+  - Complete experience with all visual effects
+
+- **Tablet**: Maintained vertical scrolling with appropriately scaled interfaces
+
+  - Simplified but still distinctive era designs
+  - Touch-optimized interaction targets
+  - Slightly reduced animation complexity
+
+- **Mobile**: Optimized vertical layout with simplified interactions
+
+  - Further simplified era representations that maintain essential character
+  - Stack complex layouts into single columns
+  - Focus on core content over decorative elements
+  - Reduced animation complexity for performance
+
 - Flawless experience across all devices and screen sizes
-- Thoughtful layout adjustments for mobile, tablet, and desktop
-- Touch-friendly interface elements on mobile
+- Thoughtful layout adjustments using CSS Grid and Flexbox
+- Touch-friendly interface elements on mobile and tablet
 - Performance optimization for various connection speeds
-
-### Accessibility Considerations
-
-- Keyboard navigation between all interactive elements
-- Screen reader compatibility with ARIA labels
-- Alternative navigation options for users who prefer reduced motion
-- High contrast mode available for all eras
+- Viewport-height considerations for small screens
 
 ### Component Hierarchy and Structure
 
 - **Root Layout**
-  - Era Container (horizontal scroll-lock container)
+  - Main Vertical Scroll Container
+    - Sticky Navigation Component (always accessible)
+    - Scroll Progress Indicator (vertical timeline)
     - Past Era Section
       - Windows 95 Desktop Container
         - Taskbar Component
         - Desktop Icons Component
         - Window Component (reusable for different content)
         - Start Menu Component
+    - Era Transition Element (Past to Present)
+      - Boot Sequence Animation
+      - Loading Progress Bar
     - Present Era Section
       - Split View Container
         - Linux Terminal Side
@@ -166,14 +182,17 @@ The website will feature three distinct eras (Past, Present, Future) implemented
         - Floating Navigation Component
         - Card Grid Component
         - Notification Center Component
+    - Era Transition Element (Present to Future)
+      - Digital Transformation Animation
+      - Particle System Effect
     - Future Era Section
       - Holographic Interface Container
         - Floating Panel Component (reusable)
         - Voice Command Interface Component
         - 3D Visualization Component
         - AI Assistant Component
-  - Global Navigation Controls
-  - Accessibility Controls
+  - Global Navigation Controls (jump to specific era)
+  - Back-to-Top Button
 
 ### Animation and Transition Specifications
 
@@ -181,11 +200,18 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 
   - Duration: 800-1200ms
   - Easing: Custom cubic-bezier(0.65, 0, 0.35, 1) for natural movement
+  - Scroll-triggered transition effects with parallax elements
+  - Transition Zones:
+    - Dedicated sections between eras that serve as visual transitions
+    - Sticky elements that persist during transition scroll region
+    - Visual indicator of progression between eras
   - Visual Effects:
-    - Past → Present: OS boot sequence with progress bar
-    - Present → Future: Digital transformation effect with particle transition
-    - Future → Past: Time-rewind effect with glitch elements
-  - Audio Cues: Subtle sound effects matching each era
+    - Past → Present: OS boot sequence with progress bar (triggered as user scrolls through transition zone)
+    - Present → Future: Digital transformation effect with particle transition (triggered as user scrolls through transition zone)
+  - Entrance animations for era elements as they enter viewport (staggered revealing)
+  - Exit animations for era elements as they leave viewport (graceful fadeout)
+  - Audio Cues: Subtle sound effects matching each era (trigger on scroll position)
+  - Scroll velocity-aware animations (faster/slower based on scroll speed)
 
 - **Micro-animations**
   - Button Hover: 150ms ease-in-out
@@ -214,7 +240,6 @@ The website will feature three distinct eras (Past, Present, Future) implemented
   - Primary: Gesture and voice with minimal clicking
   - Panels: Follow cursor with subtle magnetic effect
   - Content: Proximity-based reveal (content appears as user approaches)
-  - Voice Commands: Natural language processing for navigation
 
 ### Visual Design Details
 
@@ -242,26 +267,45 @@ The website will feature three distinct eras (Past, Present, Future) implemented
     - Error states with era-specific messaging
 
 - **Image and Asset Guidelines**
-  - Logo Treatments: Era-specific styling for company logos
+  - Logo Treatments: Era-specific styling for company logos (from [resume](./resume.md))
   - Icon Sets: Custom icon system for each era
   - Image Filters: Era-appropriate processing (pixelated for Past, etc.)
   - Background Textures: Subtle patterns matching each era's aesthetic
 
 ### Technical Implementation
 
-- Intersection Observer API for scroll-based triggers
 - CSS Grid and Flexbox for responsive layouts
 - Era-specific styling via CSS modules or styled components
 - Code splitting by era to reduce initial load time
-- Lazy loading of era-specific assets
-- State management for tracking current era
-- GitHub API integration for repository data
+- Intersection Observer API for:
+  - Detecting when each era enters/exits viewport
+  - Triggering era transition animations
+  - Updating URL and navigation state
+  - Controlling asset loading/unloading
+- Lazy loading of era-specific assets as user approaches each section
+- Dynamic asset loading based on scroll position (preload next era's assets)
+- Scroll-based animation triggers using IntersectionObserver and scroll position
+- GPU-accelerated animations for smooth transitions (transform, opacity)
+- Optimized scroll performance with passive event listeners
+- Throttled scroll handlers to prevent performance issues
 - Social media integration (LinkedIn, Bluesky)
+- Accessibility considerations for keyboard navigation and screen readers
 
 ### Performance Targets
 
 - Core Web Vitals scores: LCP < 2.5s, FID < 100ms, CLS < 0.1
 - Smooth scrolling at 60fps minimum during transitions
 - Limit main thread blocking during animation sequences
-- Asset optimization: Images < 200KB, total initial payload < 1MB
+- Asset optimization:
+  - Images < 200KB with appropriate formats (WebP/AVIF)
+  - Total initial payload < 1MB
+  - Progressive loading of era assets
+  - Preload critical assets for visible era
+- Memory management:
+  - Unload assets from past eras that are far from viewport
+  - Limit active animations to visible sections
 - Time to interactive: < 3.5s on 4G connections
+- Scroll performance optimization:
+  - Use `will-change` property judiciously
+  - Composite layers for elements that animate frequently
+  - Debounce/throttle scroll event handlers
