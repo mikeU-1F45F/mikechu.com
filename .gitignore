@@ -29,3 +29,6 @@ Thumbs.db
 
 # Dependency directories
 node_modules/
+
+# Reference images for UI design inspiration
+docs/reference/*

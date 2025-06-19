@@ -9,7 +9,6 @@
 - [ ] Set up CSS styling infrastructure with vanilla CSS
 - [ ] Create responsive grid/flexbox layout foundation
 - [ ] Implement base typography system
-- [ ] Set up initial accessibility guidelines and testing
 
 ## Phase 2: Core Structure & Layout Implementation
 
@@ -23,6 +22,8 @@
 
 ## Phase 3: "Past" Era (Windows 95) Implementation
 
+> **Design Inspiration**: Review the [past era reference images](./reference/past/) for Windows 95 UI design patterns and style guidelines.
+
 - [ ] Create Windows 95 boot sequence animation
 - [ ] Implement Windows 95 desktop environment styling
 - [ ] Add "My Computer" icon for early career content
@@ -33,6 +34,8 @@
 - [ ] Implement responsive adaptation of Windows 95 UI for mobile
 
 ## Phase 4: "Present" Era Implementation
+
+> **Design Inspiration**: Review the [present era reference images](./reference/present/) for modern UI design patterns and style guidelines.
 
 - [ ] Design modern multi-environment interface
 - [ ] Implement split-view toggle between Kali Linux and Windows 11
@@ -45,6 +48,8 @@
 - [ ] Implement responsive adaptation for modern UI
 
 ## Phase 5: "Future" Era Implementation
+
+> **Design Inspiration**: Review the [future era reference images](./reference/future/) for futuristic UI design patterns and style guidelines.
 
 - [ ] Design futuristic UI with floating panels
 - [ ] Implement AI agent interactions
