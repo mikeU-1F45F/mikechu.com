@@ -2,7 +2,7 @@
 
 ## Overall Structure: Era-Based Vertical Journey with Virtual Desktop Elements
 
-The website will feature three distinct eras (Past, Present, Future) implemented as a continuous vertical scroll where each era appears sequentially as the user scrolls down the page. Each era will maintain its unique styling and era-specific UI elements. This layout supports Mike Chu's professional brand identity of "Bridging Technology and Human Connection" by creating a chronological journey through his 25-year career in technology. For detailed professional background information, refer to the [resume](./resume.md).
+The website will feature three distinct eras (Past, Present, Future) implemented as a continuous vertical scroll where each era appears sequentially as the user scrolls down the page. Each era will maintain its unique styling and era-specific UI elements. This layout supports Mike Chu's professional brand identity of "Bridging Technology and Human Connection" by creating a chronological journey through his 20-year career in technology. For detailed professional background information, refer to the [resume](./resume.md).
 
 ### Navigation System
 

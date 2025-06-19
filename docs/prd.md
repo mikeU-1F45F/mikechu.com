@@ -98,13 +98,13 @@ See [resume](./resume.md) for comprehensive list of focus areas and technical sk
    - Styled in Windows 95 aesthetic as entry point to the journey
    - Professional headshot or stylized avatar
    - Clear headline highlighting AI-first system design expertise
-   - Concise professional summary emphasizing 25 years of experience
+   - Concise professional summary emphasizing 20+ years of experience
    - Social platform quick-links (GitHub, LinkedIn, Bluesky)
    - Primary CTA for most important action (e.g., "View Projects" or "Contact Me")
 
 2. **Professional Journey Timeline**
 
-   - Interactive NextJS-powered visualization of 25-year career progression
+   - Interactive NextJS-powered visualization of 20-year career progression
    - Key milestones, staff-level roles, and notable achievements
    - Companies/organizations worked with, showcasing industry range and depth
    - Skill evolution throughout career with technology adaptation journey

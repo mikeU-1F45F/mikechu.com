@@ -18,7 +18,7 @@ Staff Software Engineer with 20+ years of professional experience in web technol
 
 1. **AI-First Development** - Pioneer in designing and implementing AI-powered systems with focus on practical business applications and real-world impact
 2. **System Design** - Expert-level knowledge in designing scalable, resilient, and maintainable software architectures with AI integration across cloud platforms
-3. **Web Technologies** - Deep expertise in modern frontend frameworks (React, NextJS) and full-stack development, with 25 years of evolving web development experience
+3. **Web Technologies** - Deep expertise in modern frontend frameworks (React, NextJS) and full-stack development, with 20+ years of evolving web development experience
 4. **Technical Leadership** - Proven track record mentoring engineering teams, establishing best practices, and driving technical strategy at staff-level leadership
 5. **Cross-functional Collaboration** - Exceptional ability to translate complex technical concepts for diverse stakeholders, bridging the gap between business and technical domains
 6. **Customer-Facing System Design** - Focused on understanding user needs and translating them into innovative solutions
@@ -150,7 +150,7 @@ Activities: Corps of Cadets, Pi Kappa Phi
 
 ## Project Portfolio Highlights
 
-_A selection of significant projects spanning the past 25 years of career development, showcasing problem-solving abilities, technical expertise, and business impact across different domains. Visit [mikechu.com](https://mikechu.com) for detailed case studies._
+_A selection of significant projects spanning the past 20+ years of career development, showcasing problem-solving abilities, technical expertise, and business impact across different domains. Visit [mikechu.com](https://mikechu.com) for detailed case studies._
 
 ## Languages
 
