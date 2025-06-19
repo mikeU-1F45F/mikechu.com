@@ -1,0 +1,17 @@
+{
+  "name": "mikechu-portfolio",
+  "version": "1.0.0",
+  "description": "Mike Chu's portfolio website showcasing professional journey across past, present, and future",
+  "main": "src/index.html",
+  "author": "Mike Chu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/mikechu.com.git"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "software-engineer",
+    "web-development"
+  ]
+}
