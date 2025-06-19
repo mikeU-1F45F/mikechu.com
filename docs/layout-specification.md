@@ -7,6 +7,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 ### Navigation System
 
 1. **Horizontal Era Navigation**
+
    - Horizontal scroll-locking between three main eras
    - Smooth transitions with Framer Motion animations when switching eras
    - Visual indicators showing current era and navigation options
@@ -26,6 +27,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 ### Era-Specific Layouts
 
 1. **Past Era (Windows 95)**
+
    - Base: Authentic Windows 95 desktop environment with wallpaper background
    - Navigation: Start Menu in bottom-left corner with taskbar
    - Content Display: Draggable windows containing different content sections
@@ -63,6 +65,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Classic Windows 95 Easter eggs (BSOD that transforms into interactive element)
 
 2. **Present Era (Modern)**
+
    - Base: Split-screen effect showing Kali Linux and Windows 11 environments
    - Navigation: Floating navigation menu with modern OS-inspired elements
    - Content Display: Card-based content modules with smooth transitions
@@ -81,7 +84,9 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Accents: #67E480 (terminal green), #E83E8C (magenta), #FF8A00 (orange)
    - Typography:
      - Headings: Roboto (replaced Segoe UI)
-     - Body: Inter
+     - Headings (Windows): Segoe UI
+     - Headings (Linux): Ubuntu
+     - Body: Inter, SF Pro Text
      - Code: Cascadia Code, Fira Code
    - Micro-interactions:
      - Hover effects on cards
@@ -115,7 +120,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Accents: #00F0FF (electric cyan), #FF00A0 (neon magenta), #7B00FF (electric purple)
      - High contrast with glowing edge effects
    - Typography:
-     - Headings: Orbitron (replaced Eurostile)
+     - Headings: Orbitron (replaced Eurostile, Industry)
      - Body: Space Grotesk
      - Code: JetBrains Mono
    - Micro-interactions:
@@ -173,6 +178,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 ### Animation and Transition Specifications
 
 - **Era Transitions**
+
   - Duration: 800-1200ms
   - Easing: Custom cubic-bezier(0.65, 0, 0.35, 1) for natural movement
   - Visual Effects:
@@ -191,12 +197,14 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 ### Interaction Models
 
 - **Past Era**
+
   - Primary: Mouse-driven with clickable elements
   - Windows: Draggable by title bar, resizable from corners
   - Start Menu: Expands on click, closes on outside click
   - Double-click to open applications/folders
 
 - **Present Era**
+
   - Primary: Modern point-and-click with hover states
   - Cards: Click to expand, swipe on mobile
   - Terminal: Functional command input with autocomplete
@@ -211,6 +219,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 ### Visual Design Details
 
 - **Design System**
+
   - Grid System: 12-column for desktop, 8-column for tablet, 4-column for mobile
   - Spacing Scale: 4px base unit (4, 8, 16, 24, 32, 48, 64, 96)
   - Border Radius: Era-specific (0px for Past, 4-8px for Present, 12-24px for Future)
@@ -220,6 +229,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
     - Future: Glowing edges with variable opacity
 
 - **State Variations**
+
   - Interactive Elements:
     - Default state
     - Hover state
@@ -239,10 +249,6 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 
 ### Technical Implementation
 
-- NextJS framework with React 19 and TypeScript
-- Tailwind CSS v4 for styling with custom theme configuration
-- Skeleton UI v3 for component library foundation
-- Framer Motion for animations and transitions
 - Intersection Observer API for scroll-based triggers
 - CSS Grid and Flexbox for responsive layouts
 - Era-specific styling via CSS modules or styled components
@@ -259,29 +265,3 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 - Limit main thread blocking during animation sequences
 - Asset optimization: Images < 200KB, total initial payload < 1MB
 - Time to interactive: < 3.5s on 4G connections
-
-### AI Implementation Considerations
-
-- **Component Generation**
-  - Use semantic HTML structure for accessibility
-  - Generate TypeScript interfaces for all component props
-  - Include JSDoc comments for all components and functions
-  - Implement proper React hooks pattern (useEffect, useState, useContext)
-
-- **Styling Approach**
-  - Use Tailwind utility classes for layout and basic styling
-  - Create custom Tailwind plugins for era-specific design systems
-  - Use CSS variables for theme switching between eras
-  - Implement responsive design with mobile-first approach
-
-- **Animation Implementation**
-  - Use Framer Motion's AnimatePresence for component mounting/unmounting
-  - Implement scroll-linked animations with useScroll hook
-  - Create reusable animation variants for consistent motion patterns
-  - Use will-change CSS property strategically for performance
-
-- **Accessibility Implementation**
-  - Ensure ARIA roles and labels on all interactive elements
-  - Implement keyboard navigation patterns for each era
-  - Create reduced motion alternatives for all animations
-  - Maintain minimum contrast ratios for text legibility

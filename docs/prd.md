@@ -1,5 +1,9 @@
 # Mike Chu Portfolio Website Creation Prompt
 
+## AI Assistant Prompt
+
+Act as an expert UI designer. Read the following PRD project design document below. You must follow the PRD brief. 
+
 ## Professional Overview
 Create a sophisticated, technically impressive portfolio website for Mike Chu, a Staff Software Engineer with 25 years of professional experience in web technologies, system design, and artificial intelligence. The website should position Mike as a thought leader and skilled technologist while conveying his unique blend of technical expertise and interpersonal skills.
 
@@ -26,13 +30,11 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
 ## Website Requirements
 
 ### Tech Stack
-- HTML, CSS, and JavaScript for core functionality
-- Use NextJS framework with React 18 and TypeScript
-- Implement Tailwind CSS v4 for styling with custom theme configuration
-- Utilize Skeleton UI v3 for component library and design system foundation
-- Consider integration with Vercel for optimal NextJS deployment and analytics
-- Ensure code is exemplary, demonstrating best practices in web development
-- Include subtle technical flourishes that demonstrate coding skill without sacrificing usability
+- **Core**: HTML5, CSS3, and JavaScript (ES6+)
+- **Styling**: Vanilla CSS with modern layout features (Flexbox, Grid)
+- **Fonts**: System fonts with Inter as a web font fallback
+- **Hosting**: Simple static file hosting (GitHub Pages, Netlify, or similar)
+- **Development**: Local development with Live Server or similar
 
 ### Design Elements & Theme
 - **Chronological Journey Theme: "Past, Present, Future"**
@@ -43,9 +45,11 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
 
 #### **PAST: Windows 95 Era**
 - **Visual Style**:
-  - Authentic Windows 95 desktop environment with Start menu, taskbar, and icons
-  - Classic window frames with functional minimize/maximize/close buttons
-  - Pixelated animations and period-appropriate loading effects
+  - Primary: #2563eb (blue)
+  - Text: #1f2937 (dark gray)
+  - Background: #ffffff (white)
+  - Secondary Background: #f9fafb (light gray)
+  - Borders: #e5e7eb (light gray)
   - Boot-up sequence mimicking vintage Windows 95 loading screen
   - My Computer, Recycle Bin, and Network Neighborhood icons
   
@@ -60,43 +64,17 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
   - Body text: "Fixedsys" or "Terminal" for authentic OS feel
   - Code snippets: "Courier New" from the era
 
-#### **PRESENT: Modern Multi-Environment**
-- **Visual Style**:
-  - Split-screen effect showing Kali Linux and Windows 11 environments side by side
-  - Modern flat design with subtle depth and shadows
-  - Clean, professional interface with AI assistant sidebar/overlay
-  - Multi-desktop workspace concept with draggable windows
-  - Dark mode preference toggle
+#### **Typography**
+  - Headings: "Inter", sans-serif (Google Fonts)
+  - Body text: System UI, -apple-system, sans-serif
+  - Code snippets: "SF Mono", "Roboto Mono", monospace
+  - Responsive typography that scales appropriately across devices
 
-- **Color Palette**:
-  - Primary: #171C28 (deep blue-gray for Kali Linux sections)
-  - Secondary: #0078D7 (Windows 11 blue)
-  - Accents: #67E480 (terminal green), #E83E8C (accent pink), #FF8A00 (alert orange)
-  - Subtle gradients and transparency effects
-
-- **Typography**:
-  - Headings: "Segoe UI" (Windows 11) and "Ubuntu" (Linux)
-  - Body text: "Inter" or "SF Pro Text" for modern readability
-  - Code snippets: "Cascadia Code" or "Fira Code" with ligatures
-
-#### **FUTURE: Advanced AI Integration**
-- **Visual Style**:
-  - Floating, modular UI panels with high contrast
-  - Holographic/AR-inspired interface elements
-  - Particle/data stream animated backgrounds
-  - Wireframe 3D visualizations of interconnected systems
-  - Minimal, gesture-based navigation patterns
-
-- **Color Palette**:
-  - Primary: #080C24 (deep space)
-  - Secondary: #FFFFFF (pure white)
-  - Accents: #00F0FF (electric cyan), #FF00A0 (neon magenta), #7B00FF (electric purple)
-  - High contrast with glowing edge effects
-
-- **Typography**:
-  - Headings: "Eurostile" or "Industry" (futuristic sans-serif)
-  - Body text: "Space Grotesk" or custom variable font
-  - Code/data: "JetBrains Mono" or futuristic monospace with visualization elements
+#### **Layout**
+  - Single-column layout for optimal readability
+  - Card-based design for content sections
+  - Consistent spacing and padding throughout
+  - Mobile-first responsive design approach
 
 ### Site Structure
 1. **Hero Section**
@@ -160,6 +138,28 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
    - Download resume option
    - Copyright information
    - Site technology acknowledgment
+
+### Interactive Elements
+1. **Navigation**
+   - Smooth scrolling to sections
+   - Active section highlighting
+   - Mobile-responsive menu
+   - Keyboard navigation support
+   - Back to top button
+
+2. **UI Elements**
+   - Hover effects on buttons and links
+   - Focus states for keyboard navigation
+   - Simple form validation
+   - Responsive images
+   - Accessible color contrast
+
+3. **Enhancements**
+   - Reduced motion support
+   - Print styles
+   - Basic form validation
+   - External link indicators
+   - Skip to main content link
 
 ### Technical Specifications
 1. **Responsive Design**
@@ -242,22 +242,29 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
 ## Implementation Guidelines
 
 ### Technical Implementation Details
-- **Code Architecture**:
-  - Use NextJS App Router for clean organization of routes and API endpoints
-  - Implement TypeScript interfaces for all data structures
-  - Create reusable React components for each UI paradigm (Windows 95, Modern, Future)
-  - Use Context API for theme/era state management
-  - Implement Intersection Observer for scroll-based era transitions
-  - Use React Suspense and dynamic imports for optimal loading performance
+- **Code Structure**:
+  - Single HTML file for content structure
+  - External CSS file for styling
+  - Minimal JavaScript for basic interactivity
+  - No build step or complex tooling required
+  - Semantic HTML5 elements for better accessibility
+  - Mobile-first responsive design approach
 
-- **Animation Strategy**:
-  - Use CSS v4 scroll-driven animations for elements that appear as users scroll
-  - Implement view transitions API for smooth era-to-era transitions
-  - Use Framer Motion for more complex interactive animations
-  - Leverage Skeleton UI v3 transitions and animations for component interactions
-  - Implement CSS variables for era-specific styling across components
-  - Create smooth interpolation between era color schemes during transitions
-  - Utilize CSS @scroll-timeline and scroll() for scroll-triggered effects
+- **Performance Optimization**:
+  - Minimal external dependencies
+  - Optimized assets and images
+  - Proper caching headers for static files
+  - Fast Time to Interactive (TTI)
+  - Lightweight animations using CSS transitions
+  - Lazy loading for non-critical resources
+
+- **Accessibility**:
+  - WCAG 2.1 AA compliance
+  - Semantic HTML structure
+  - Keyboard navigation support
+  - Proper color contrast ratios
+  - ARIA labels where needed
+  - Responsive design for all screen sizes
 
 - **State Management**:
   - Track current era (Past/Present/Future) in URL for shareable deep links
@@ -355,33 +362,5 @@ Create a sophisticated, technically impressive portfolio website for Mike Chu, a
 ## Timeline & Iteration Planning
 - Request feedback after each major implementation phase
 - Suggest implementing eras incrementally, starting with the Present era
-- Propose A/B testing of key interactive elements for engagement
 - Schedule regular check-ins to review progress and adjust direction
 - Allow for evolution of the Future section as new technologies emerge
-
-## Component & Styling Requirements
-- Build UI components with Skeleton UI v3 as the foundation
-- Create era-specific Tailwind theme extensions for each time period
-- Implement micro-interactions on all interactive elements:
-  - Subtle hover states with appropriate era-styling
-  - Click/tap feedback animations
-  - Focus state indicators that match each era's design language
-  - Form input animations and validation feedback
-- Design scroll-triggered animations using CSS v4 features:
-  - Elements that fade/slide in as they enter the viewport
-  - Parallax scrolling effects for depth
-  - Progress indicators tied to scroll position
-  - Scroll-linked animations for timeline elements
-- Create custom Skeleton UI v3 component variants for each era
-
-## API & Integration Requirements
-- GitHub API integration for pulling repository and contribution data
-- Social media integration for LinkedIn and other platforms
-- Consider headless CMS for easier content management
-- Analytics implementation to track user engagement with different eras
-- Setup for automated deployment via Docker image
-
-
-## UI Prompt
-
-Act as an expert UI designer. Read the attached PRD project design document. Generate images that align with the creative brief and provide a conceptual finished product to present to the client for his website. You must follow the PRD brief. I expect to see images here in this chat showing the various parts of the portfolio website.
