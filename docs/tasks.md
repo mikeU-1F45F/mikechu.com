@@ -1,127 +1,159 @@
 # Mike Chu Portfolio Website Development Tasks
 
-## Phase 1: Project Setup & Foundation
+## Project Setup & Foundation
 
 - [x] Set up project repository
 - [x] Configure static site hosting (Cloudflare Page)
-- [x] Set up local development environment with Live Server using Deno2 and npm:live-server
+- [x] Set up local development environment using Deno file_server
 - [x] Create basic HTML structure with proper semantic markup
-- [x] Set up CSS styling infrastructure with vanilla CSS
-- [x] Create responsive grid/flexbox layout foundation
-- [x] Implement base typography system
+- [ ] Set up CSS styling infrastructure with vanilla CSS
+  - [ ] Implement 12-column grid system (desktop)
+  - [ ] Create responsive grid using CSS Grid and Flexbox
+  - [ ] Define 4px spacing scale system
+  - [ ] Implement era-specific border radius (0px, 4-8px, 12-24px)
+- [ ] Create base typography system
+  - [ ] Set up typography variables for each era
+  - [ ] Implement responsive font scaling
+  - [ ] Define font stacks for each section
 
-## Phase 2: Core Structure & Layout Implementation
+## Core Structure & Layout Implementation
 
-- [ ] Implement vertical scrolling layout with "Past, Present, Future" sections
-- [ ] Create smooth transitions between era sections
-- [ ] Set up scroll-triggered animations between eras
-- [ ] Implement responsive design across all device sizes
-- [ ] Create navigation system that works across all eras
-- [ ] Implement URL state management for deep linking to sections via hashtag anchors
-- [ ] Implement WCAG 2.1 AA compliance baseline
+- [x] Implement vertical scrolling layout with "Past, Present, Future" sections
+- [ ] Create smooth scroll-based navigation system
+  - [ ] Implement single continuous vertical scroll
+  - [ ] Develop scroll progress indicator
+- [ ] Design era transition mechanics
+  - [ ] Implement 800-100ms transitions
+  - [ ] Create custom cubic-bezier easing
+  - [ ] Add parallax scrolling effects
+  - [ ] Design transition zones between eras
+- [ ] Implement responsive design
+  - [ ] Develop touch-optimized interactions
+  - [ ] Implement viewport-height considerations
+  - [ ] Ensure WCAG 2.1 AA compliance
 
-## Phase 3: "Past" Era (Windows 95) Implementation
+## "Past" Era (Windows 95) Implementation
 
 > **Design Inspiration**: Review the [past era reference images](./reference/past/) for Windows 95 UI design patterns and style guidelines.
 
-- [ ] Create Windows 95 boot sequence animation
-- [ ] Implement Windows 95 desktop environment styling
-- [ ] Add "My Computer" icon for early career content
-- [ ] Create Start Menu for navigation within Past section
-- [ ] Add system notification sounds and dialog boxes
-- [ ] Implement "Blue Screen of Death" easter egg
-- [ ] Create period-appropriate styling for all UI elements
-- [ ] Implement responsive adaptation of Windows 95 UI for mobile
+- [ ] Create Windows 95 desktop environment
+  - [ ] Implement authentic flat Windows 95 wallpaper background
+  - [ ] Design classic Windows 95 color palette
+  - [ ] Create beveled edges and shadow effects
+- [ ] Develop Start Menu and Taskbar
+  - [ ] Implement animated Start Menu expansion
+  - [ ] Create scrolling-triggered information windows
+  - [ ] Add system sound interactions
+- [ ] Build nostalgic technology sections
+  - [ ] Create "My Computer" icon with early career content
+  - [ ] Design period-appropriate icons for:
+    - C# .NET Framework
+    - PHP
+    - Java Spring
+    - ARC GIS
+    - SQL
+    - IIS
+    - HTML+CSS+JS
+- [ ] Implement Windows 95 micro-interactions
+  - [ ] Add minimize/close buttons
+  - [ ] Create boot sequence animation
+  - [ ] Design "Blue Screen of Death" easter egg when double-clicking the desktop
+- [ ] Develop responsive Windows 95 UI adaptation
+  - [ ] Simplify UI for mobile
+  - [ ] Maintain era's essential character across devices (eg on mobile it should still "feel" like Windows 95)
 
-## Phase 4: "Present" Era Implementation
+## "Present" Era Implementation
 
 > **Design Inspiration**: Review the [present era reference images](./reference/present/) for modern UI design patterns and style guidelines.
 
-- [ ] Design modern multi-environment interface
-- [ ] Implement split-view toggle between Kali Linux and Windows 11
-- [ ] Create modern window management features
-- [ ] Implement interactive terminal with syntax highlighting
-- [ ] Add GitHub integration showing repositories and activity
-- [ ] Implement dark/light mode toggle
-- [ ] Create interactive technical architecture diagrams
-- [ ] Design notification center for professional updates
-- [ ] Implement responsive adaptation for modern UI
+- [ ] Design multi-environment interface
+  - [ ] Create Windows 11 and Linux desktop amalgamation
+  - [ ] Implement floating navigation menu
+- [ ] Develop interactive components
+  - [ ] Create card-based content modules
+  - [ ] Implement smooth card transitions
+  - [ ] Design hover and expansion effects
+- [ ] Build technology showcase sections
+  - [ ] Create visualizations for:
+    - C# .NET
+    - Python
+    - TypeScript
+    - AI Systems
+    - Linux
+    - Docker & Kubernetes
+- [ ] Implement advanced interactions
+  - [ ] Design realistic terminal with syntax highlighting
+  - [ ] Create GitHub activity integration
+  - [ ] Develop notification center
+  - [ ] Add window management features (snap, stack)
+- [ ] Create responsive modern UI
+  - [ ] Implement touch-friendly interactions
+  - [ ] Design mobile-optimized layouts
 
-## Phase 5: "Future" Era Implementation
+## "Future" Era Implementation
 
 > **Design Inspiration**: Review the [future era reference images](./reference/future/) for futuristic UI design patterns and style guidelines.
 
-- [ ] Design futuristic UI with floating panels
-- [ ] Implement AI agent interactions
-- [ ] Create particle effect transitions
-- [ ] Add 3D visualizations of future technology concepts
-- [ ] Implement simulated voice/natural language navigation
-- [ ] Create dynamic content personalization
-- [ ] Design data stream visualizations
-- [ ] Implement high-contrast, accessible futuristic UI
-- [ ] Create responsive adaptation for future interface
+- [ ] Design holographic interface
+  - [ ] Create minimalist dark interface
+  - [ ] Implement glowing, high-contrast elements
+  - [ ] Develop floating, responsive panels
+- [ ] Build advanced interaction models
+  - [ ] Create gesture-based navigation
+  - [ ] Implement context-activated interfaces
+  - [ ] Design proximity-based content reveal
+- [ ] Develop technology visualization sections
+  - [ ] Create neural network visualizations
+  - [ ] Design protocol communication flows
+  - [ ] Implement AI agent interactions
+- [ ] Create futuristic micro-interactions
+  - [ ] Develop cursor-following panels
+  - [ ] Design particle/data stream transitions
+  - [ ] Implement simulated neural interface
+- [ ] Build industry-specific content zones
+  - [ ] Climate Tech dashboards
+  - [ ] Energy flow visualizations
+  - [ ] Personalized learning platforms
+  - [ ] Algorithmic trading visuals
+  - [ ] Transportation network systems
 
-## Phase 6: Content Population
+## Performance Optimization
 
-- [ ] Gather and format professional biography content
-- [ ] Create professional journey timeline
-- [ ] Collect and format project showcase information
-- [ ] Prepare expertise and skills visualization data
-- [ ] Gather thought leadership content
-- [ ] Prepare social platform integration content
-- [ ] Optimize all media assets (images, logos, etc.)
-- [ ] Create and format code samples for technical demonstrations
+- [ ] Implement Intersection Observer API
+  - [ ] Create viewport entry/exit detection
+  - [ ] Develop era transition triggers
+  - [ ] Manage asset loading/unloading
+- [ ] Optimize asset delivery
+  - [ ] Split the present and future era html, css, and js files into separate bundles
+  - [ ] Implement lazy loading
+  - [ ] Preload critical era assets
+  - [ ] Limit initial payload to < 1MB
+- [ ] Enhance scroll performance
+  - [ ] Use GPU-accelerated animations
+  - [ ] Implement passive event listeners
+  - [ ] Throttle scroll handlers
+  - [ ] Use `will-change` property judiciously
 
-## Phase 7: Interactive Features & Enhancements
+## Advanced Interaction & Accessibility
 
-- [ ] Implement interactive expertise visualization
-- [ ] Create project showcase filtering functionality
-- [ ] Add contact form with validation
-- [ ] Implement social media integration
-- [ ] Create era-specific interactive elements
-- [ ] Add animation timing coordinator for multi-element transitions
-- [ ] Implement localStorage for user preferences
-- [ ] Add easter eggs and special interactions
+- [ ] Develop comprehensive navigation
+  - [ ] Implement global era jump controls via upper-left floating tiny menu
+  - [ ] Create deep linking elements including push state upon entering era
+  - [ ] Create back-to-top functionality
+- [ ] Create interactive elements
+  - [ ] Develop content filtering
+  - [ ] Implement dynamic personalization
+  - [ ] Add easter eggs and special interactions
 
-## Phase 8: Performance Optimization
+## Content Population & SEO
 
-- [ ] Optimize asset delivery and lazy loading
-- [ ] Implement code splitting by era
-- [ ] Optimize animations for performance
-- [ ] Implement content-visibility for off-screen content
-- [ ] Optimize image loading with WebP/AVIF formats
-- [ ] Implement proper caching headers
-- [ ] Audit and improve Core Web Vitals metrics
-- [ ] Optimize for fast Time to Interactive (TTI)
-
-## Phase 9: SEO & Metadata
-
-- [ ] Implement semantic HTML structure
-- [ ] Add proper meta tags for each section
-- [ ] Create JSON-LD structured data markup
-- [ ] Optimize image alt text and file names
-- [ ] Generate sitemap.xml and robots.txt
-- [ ] Implement canonical URLs
-- [ ] Optimize for primary and secondary keywords
-
-## Phase 10: Testing & Quality Assurance
-
-- [ ] Conduct cross-browser testing
-- [ ] Test on multiple device sizes
-- [ ] Perform accessibility audit (WCAG 2.1 AA)
-- [ ] Test keyboard navigation
-- [ ] Verify screen reader compatibility
-- [ ] Test performance metrics
-- [ ] Validate HTML and CSS
-- [ ] Conduct user testing sessions
-
-## Phase 11: Launch Preparation
-
-- [ ] Final content review and proofreading
-- [ ] Security audit
-- [ ] Performance final review
-- [ ] Analytics implementation
-- [ ] Create backup and recovery plan
-- [ ] Prepare documentation
-- [ ] Create launch checklist
-- [ ] Schedule launch date
+- [ ] Gather professional content from [resume](./resume.md)
+  - [ ] Compile professional biography
+  - [ ] Create career timeline
+  - [ ] Collect project showcases
+  - [ ] Prepare skills visualization
+- [ ] Optimize for search engines
+  - [ ] Implement semantic HTML
+  - [x] Add meta tags
+  - [ ] Create JSON-LD structured data
+  - [ ] Generate sitemap and robots.txt
