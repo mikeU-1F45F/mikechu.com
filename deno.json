@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "start": "deno run --allow-net --allow-read https://deno.land/std/http/file_server.ts src/",
-    "dev": "deno run --allow-net --allow-read --watch https://deno.land/std/http/file_server.ts src/"
+    "start": "live-server --port=3000 --host=localhost --entry-file=./src/index.html",
+    "dev": "live-server --port=3000 --host=localhost --entry-file=./src/index.html"
   },
   "compilerOptions": {
     "lib": ["dom", "deno.ns"]
@@ -19,6 +19,5 @@
     "rules": {
       "tags": ["recommended"]
     }
-  },
-  "importMap": "./import_map.json"
+  }
 }
