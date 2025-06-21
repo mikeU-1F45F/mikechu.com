@@ -7,6 +7,7 @@
         <meta
             name="description"
             content="Staff Software Engineer with 20+ years of experience in AI-first development, system design, and technical leadership. Specializing in React, TypeScript, and scalable architectures."
+        />
         <meta
             name="keywords"
             content="staff software engineer, system design architect, AI engineering leader, technical leadership, React architecture, TypeScript expert, customer-centric, performance optimization"
@@ -24,39 +25,609 @@
                 data-era="past"
                 aria-label="Past Era - Windows 95 Interface"
             >
+                <div class="desktop desktop--win95">
+                    <!-- Desktop Icons -->
+                    <div class="desktop__icons">
+                        <div
+                            class="desktop-icon"
+                            tabindex="0"
+                            aria-label="My Computer - Early Career"
+                        >
+                            <div
+                                class="desktop-icon__image"
+                                aria-hidden="true"
+                            ></div>
+                            <span class="desktop-icon__label">My Computer</span>
+                        </div>
+                        <div
+                            class="desktop-icon"
+                            tabindex="0"
+                            aria-label="My Documents - Projects"
+                        >
+                            <div
+                                class="desktop-icon__image"
+                                aria-hidden="true"
+                            ></div>
+                            <span class="desktop-icon__label"
+                                >My Documents</span
+                            >
+                        </div>
+                        <div
+                            class="desktop-icon"
+                            tabindex="0"
+                            aria-label="Internet Explorer - Web Development"
+                        >
+                            <div
+                                class="desktop-icon__image"
+                                aria-hidden="true"
+                            ></div>
+                            <span class="desktop-icon__label"
+                                >Internet Explorer</span
+                            >
+                        </div>
+                        <div
+                            class="desktop-icon"
+                            tabindex="0"
+                            aria-label="Recycle Bin"
+                        >
+                            <div
+                                class="desktop-icon__image"
+                                aria-hidden="true"
+                            ></div>
+                            <span class="desktop-icon__label">Recycle Bin</span>
+                        </div>
+                    </div>
+
+                    <!-- Windows that can be opened -->
+                    <div class="windows-container" aria-live="polite"></div>
+
+                    <!-- Taskbar -->
+                    <div
+                        class="taskbar"
+                        role="region"
+                        aria-label="Windows 95 Taskbar"
+                    >
+                        <button
+                            class="start-button"
+                            aria-expanded="false"
+                            aria-controls="start-menu"
+                        >
+                            <span
+                                class="start-button__icon"
+                                aria-hidden="true"
+                            ></span>
+                            <span class="start-button__text">Start</span>
+                        </button>
+                        <div
+                            class="taskbar__items"
+                            aria-label="Open applications"
+                        ></div>
+                        <div class="taskbar__clock" aria-live="polite">
+                            <time datetime="2000-01-01T12:00">12:00 PM</time>
+                        </div>
+                    </div>
+
+                    <!-- Start Menu (hidden by default) -->
+                    <div class="start-menu" id="start-menu" aria-hidden="true">
+                        <div class="start-menu__header">
+                            <span class="start-menu__text">Windows 95</span>
+                        </div>
+                        <ul class="start-menu__items" role="menu">
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label">Programs</span>
+                            </li>
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label">Documents</span>
+                            </li>
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label">Settings</span>
+                            </li>
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label">Find</span>
+                            </li>
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label">Help</span>
+                            </li>
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label">Run...</span>
+                            </li>
+                            <li
+                                class="start-menu__divider"
+                                role="separator"
+                            ></li>
+                            <li
+                                class="start-menu__item"
+                                role="menuitem"
+                                tabindex="-1"
+                            >
+                                <span
+                                    class="start-menu__icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="start-menu__label"
+                                    >Shut Down...</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <section
                 class="era-transition"
-                id="transition-present-future"
+                id="transition-past-present"
                 aria-label="Transition from Past to Present Era"
             >
+                <div class="transition-content">
+                    <div class="boot-sequence">
+                        <div
+                            class="boot-sequence__progress"
+                            aria-label="Loading progress"
+                        >
+                            <div class="boot-sequence__bar"></div>
+                        </div>
+                        <div class="boot-sequence__text" aria-live="polite">
+                            Loading modern environment...
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Present Era - Modern Windows & Linux -->
             <section
                 class="era era--present"
                 id="era-present"
                 data-era="present"
                 aria-label="Present Era - Modern Windows & Linux Interface"
             >
+                <div class="desktop desktop--modern">
+                    <!-- Floating Navigation Menu -->
+                    <nav
+                        class="floating-nav"
+                        aria-label="Present Era Navigation"
+                    >
+                        <ul class="floating-nav__list">
+                            <li class="floating-nav__item">
+                                <button
+                                    class="floating-nav__button"
+                                    aria-label="Home"
+                                    data-section="home"
+                                >
+                                    <span
+                                        class="floating-nav__icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                            </li>
+                            <li class="floating-nav__item">
+                                <button
+                                    class="floating-nav__button"
+                                    aria-label="Projects"
+                                    data-section="projects"
+                                >
+                                    <span
+                                        class="floating-nav__icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                            </li>
+                            <li class="floating-nav__item">
+                                <button
+                                    class="floating-nav__button"
+                                    aria-label="Skills"
+                                    data-section="skills"
+                                >
+                                    <span
+                                        class="floating-nav__icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                            </li>
+                            <li class="floating-nav__item">
+                                <button
+                                    class="floating-nav__button"
+                                    aria-label="Experience"
+                                    data-section="experience"
+                                >
+                                    <span
+                                        class="floating-nav__icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Card-based Content -->
+                    <div class="card-grid" aria-label="Present Era Content">
+                        <article class="card" tabindex="0">
+                            <header class="card__header">
+                                <h2 class="card__title">C# .NET Development</h2>
+                            </header>
+                            <div class="card__content">
+                                <p>
+                                    Modern C# and .NET expertise for scalable
+                                    applications.
+                                </p>
+                            </div>
+                            <footer class="card__footer">
+                                <button
+                                    class="card__expand-button"
+                                    aria-label="Expand card"
+                                >
+                                    Learn More
+                                </button>
+                            </footer>
+                        </article>
+
+                        <article class="card" tabindex="0">
+                            <header class="card__header">
+                                <h2 class="card__title">Python Solutions</h2>
+                            </header>
+                            <div class="card__content">
+                                <p>
+                                    Python development for data science and
+                                    automation.
+                                </p>
+                            </div>
+                            <footer class="card__footer">
+                                <button
+                                    class="card__expand-button"
+                                    aria-label="Expand card"
+                                >
+                                    Learn More
+                                </button>
+                            </footer>
+                        </article>
+
+                        <article class="card" tabindex="0">
+                            <header class="card__header">
+                                <h2 class="card__title">TypeScript Projects</h2>
+                            </header>
+                            <div class="card__content">
+                                <p>
+                                    Enterprise-grade TypeScript applications
+                                    with modern patterns.
+                                </p>
+                            </div>
+                            <footer class="card__footer">
+                                <button
+                                    class="card__expand-button"
+                                    aria-label="Expand card"
+                                >
+                                    Learn More
+                                </button>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <!-- Terminal Component -->
+                    <div class="terminal" aria-label="Interactive Terminal">
+                        <div class="terminal__header">
+                            <span class="terminal__title">bash</span>
+                            <div class="terminal__controls">
+                                <button
+                                    class="terminal__button terminal__button--minimize"
+                                    aria-label="Minimize terminal"
+                                ></button>
+                                <button
+                                    class="terminal__button terminal__button--maximize"
+                                    aria-label="Maximize terminal"
+                                ></button>
+                                <button
+                                    class="terminal__button terminal__button--close"
+                                    aria-label="Close terminal"
+                                ></button>
+                            </div>
+                        </div>
+                        <div class="terminal__body">
+                            <div class="terminal__output" aria-live="polite">
+                                <p class="terminal__line">
+                                    Welcome to Mike's interactive terminal.
+                                </p>
+                                <p class="terminal__line">
+                                    Type 'help' to see available commands.
+                                </p>
+                            </div>
+                            <div class="terminal__input-line">
+                                <span class="terminal__prompt"
+                                    >mike@dev:~$</span
+                                >
+                                <input
+                                    type="text"
+                                    class="terminal__input"
+                                    aria-label="Terminal input"
+                                    spellcheck="false"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Center -->
+                    <div class="notification-center" aria-hidden="true">
+                        <div class="notification-center__header">
+                            <h2 class="notification-center__title">
+                                Notifications
+                            </h2>
+                            <button
+                                class="notification-center__close"
+                                aria-label="Close notification center"
+                            ></button>
+                        </div>
+                        <div class="notification-center__body">
+                            <ul class="notification-center__list" role="list">
+                                <!-- Notifications will be dynamically added here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+            <!-- Transition from Present to Future -->
             <section
                 class="era-transition"
                 id="transition-present-future"
                 aria-label="Transition from Present to Future Era"
             >
-            </section
+                <div class="transition-content">
+                    <div class="digital-transformation">
+                        <div class="particle-system" aria-hidden="true"></div>
+                        <div class="transition-text" aria-live="polite">
+                            Initializing future interface...
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Era - AI Interface -->
             <section
                 class="era era--future"
                 id="era-future"
                 data-era="future"
                 aria-label="Future Era - AI Interface"
             >
+                <div class="holographic-interface">
+                    <!-- Floating Panels -->
+                    <div
+                        class="floating-panels"
+                        aria-label="Interactive AI panels"
+                    >
+                        <article class="floating-panel" tabindex="0">
+                            <header class="floating-panel__header">
+                                <h2 class="floating-panel__title">
+                                    Machine Learning
+                                </h2>
+                            </header>
+                            <div class="floating-panel__content">
+                                <div
+                                    class="neural-network-viz"
+                                    aria-hidden="true"
+                                ></div>
+                                <p>
+                                    Advanced neural network architectures and
+                                    training methodologies.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="floating-panel" tabindex="0">
+                            <header class="floating-panel__header">
+                                <h2 class="floating-panel__title">
+                                    Natural Language Processing
+                                </h2>
+                            </header>
+                            <div class="floating-panel__content">
+                                <div class="nlp-viz" aria-hidden="true"></div>
+                                <p>
+                                    Language models and semantic understanding
+                                    systems.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="floating-panel" tabindex="0">
+                            <header class="floating-panel__header">
+                                <h2 class="floating-panel__title">
+                                    Agent Protocols
+                                </h2>
+                            </header>
+                            <div class="floating-panel__content">
+                                <div
+                                    class="protocol-viz"
+                                    aria-hidden="true"
+                                ></div>
+                                <p>
+                                    Next-generation agent communication
+                                    frameworks.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- AI Assistant Chat -->
+                    <div
+                        class="ai-assistant"
+                        aria-label="AI Assistant Interface"
+                    >
+                        <div class="ai-assistant__header">
+                            <h2 class="ai-assistant__title">AI Assistant</h2>
+                        </div>
+                        <div class="ai-assistant__body">
+                            <div
+                                class="ai-assistant__messages"
+                                aria-live="polite"
+                            >
+                                <div class="ai-message">
+                                    <p>
+                                        Hello! I'm Mike's AI assistant. How can
+                                        I help you explore his work and
+                                        expertise?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ai-assistant__input">
+                                <input
+                                    type="text"
+                                    class="ai-assistant__text-input"
+                                    aria-label="Message the AI Assistant"
+                                    placeholder="Ask me anything..."
+                                />
+                                <button
+                                    class="ai-assistant__send-button"
+                                    aria-label="Send message"
+                                >
+                                    <span
+                                        class="ai-assistant__send-icon"
+                                        aria-hidden="true"
+                                    ></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Visualization -->
+                    <div class="data-stream" aria-hidden="true"></div>
+                </div>
             </section>
         </main>
 
-        <button class="fab" id="floating-action-button" aria-label="AI Assistant">
+        <!-- Floating Action Button for Contact -->
+        <button
+            class="fab"
+            id="floating-action-button"
+            aria-label="Contact Mike Chu"
+        >
+            <span class="fab__icon" aria-hidden="true"></span>
         </button>
 
+        <!-- Scroll Progress Indicator -->
         <div class="scroll-progress" aria-hidden="true">
             <div class="scroll-progress__indicator" id="scroll-indicator"></div>
+            <button
+                class="back-to-top"
+                id="back-to-top-button"
+                aria-label="Back to top"
+            >
+                <span class="back-to-top__icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Contact Modal (hidden by default) -->
+        <div
+            class="modal"
+            id="contact-modal"
+            aria-hidden="true"
+            role="dialog"
+            aria-labelledby="contact-modal-title"
+        >
+            <div class="modal__content">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="contact-modal-title">
+                        Contact Mike Chu
+                    </h2>
+                    <button
+                        class="modal__close"
+                        aria-label="Close modal"
+                    ></button>
+                </header>
+                <div class="modal__body">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-input"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label"
+                                >Message</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="form-textarea"
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="form-button form-button--primary"
+                            >
+                                Send Message
+                            </button>
+                            <button
+                                type="button"
+                                class="form-button form-button--secondary modal-close"
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <footer class="footer" role="contentinfo">
