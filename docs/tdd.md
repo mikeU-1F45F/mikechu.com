@@ -35,7 +35,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
    - Navigation: Start Menu in bottom-left corner with taskbar which should animate opening and displaying information
      windows as the user scrolls
    - Technologies for UI Inspiration:
-     - .NET C# (Visual Studio icons and interfaces)
+     - C# .NET Framework (Visual Studio icons and interfaces)
      - PHP (Logo and syntax highlighting)
      - Java Spring (Java cup logo and Spring green accents)
      - ARC GIS (Map visualization elements and geospatial icons)
@@ -68,11 +68,11 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 
 2. **Present Era (Modern)**
 
-   - Base: Split-screen effect showing Kali Linux and Windows 11 environments
+   - Base: Windows 11 & Linux environments
    - Navigation: Floating navigation menu with modern OS-inspired elements
    - Content Display: Card-based content modules with smooth transitions
    - Technologies for UI Inspiration (aligned with skills in [resume](./resume.md)):
-     - .NET C# (Modern Visual Studio interface elements and .NET 8 branding)
+     - C# .NET (JetBrains Rider interface elements and .NET 8 branding)
      - Python (Python logo, Jupyter notebook interfaces, and Anaconda environments)
      - TypeScript (TS logo, VSCode editor themes, and type definition visuals)
      - AI Systems (Neural network visualizations and model architecture diagrams)
@@ -80,7 +80,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Docker & Kubernetes (Container visualizations, orchestration diagrams, and logos)
    - Industries for Content Themes:
      - Marketing Technology (MarTech stack visualizations and campaign analytics dashboards)
-     - Education Technology (reflecting experience at Penn Foster/Ashworth College)
+     - Education Technology (minor reflection on experience at Penn Foster/Ashworth College)
    - Color Palette:
      - Primary: #171C28 (deep navy)
      - Secondary: #0078D7 (windows blue)
@@ -102,7 +102,7 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 
 3. **Future Era (AI Integration)**
    - Base: Minimalist, dark interface with holographic and glowing elements
-   - Navigation: Gesture-based or voice-activated
+   - Navigation: Gesture-based or context-activated (eg mouseover expands to provide ghost text/completion context)
    - Content Display: Floating panels that respond to user interaction
    - Technologies for UI Inspiration (based on future-focused technologies in [resume](./resume.md)):
      - Machine Learning (ML) (Neural network visualizations, model architecture diagrams, and training graphs)
@@ -111,7 +111,6 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Model Context Protocol (MCP) (Tool call and context exchange visualizations)
      - Systems Architecture (High-level system design, microservice visualizations, and cloud architecture)
    - Industries for Content Themes:
-     - Material Design (Next-generation Material You principles and adaptive UI elements)
      - Climate Tech (Environmental monitoring dashboards, carbon capture technologies, and sustainability metrics)
      - Energy (Smart grid visualizations, renewable energy flow diagrams, and predictive consumption models)
      - Education (Personalized learning platforms, knowledge graph visualizations, and adaptive curriculum systems)
@@ -131,7 +130,6 @@ The website will feature three distinct eras (Past, Present, Future) implemented
      - Content that reacts to user proximity
      - Particle/data stream effects for transitions
      - AI agents that proactively offer relevant content
-     - Interactive 3D visualizations
      - Simulated neural interface with thought-navigation preview
      - Data stream visualizations showing interconnected knowledge systems
 
@@ -166,8 +164,8 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 
 - **Root Layout**
   - Main Vertical Scroll Container
-    - Sticky Navigation Component (always accessible)
-    - Scroll Progress Indicator (vertical timeline)
+    - Initial onload retro boot up animation similar to CRT monitor turning on (only animated once per page load)
+    - Scroll Progress Indicator (subtle vertical timeline on the left)
     - Past Era Section
       - Windows 95 Desktop Container
         - Taskbar Component
@@ -175,12 +173,10 @@ The website will feature three distinct eras (Past, Present, Future) implemented
         - Window Component (reusable for different content)
         - Start Menu Component
     - Era Transition Element (Past to Present)
-      - Boot Sequence Animation
-      - Loading Progress Bar
+      - Fade out Past then jump cut into
+      - Mock terminal loading steps
     - Present Era Section
-      - Split View Container
-        - Linux Terminal Side
-        - Windows 11 Side
+      - Windows & Linux Desktop Container amalgamation
         - Floating Navigation Component
         - Card Grid Component
         - Notification Center Component
@@ -192,9 +188,9 @@ The website will feature three distinct eras (Past, Present, Future) implemented
         - Floating Panel Component (reusable)
         - Voice Command Interface Component
         - 3D Visualization Component
-        - AI Assistant Component
+        - AI Assistant chat component
   - Global Navigation Controls (jump to specific era)
-  - Back-to-Top Button
+  - Back-to-Top Button decorated on the scroll progress indicator.
 
 ### Animation and Transition Specifications
 
@@ -255,21 +251,8 @@ The website will feature three distinct eras (Past, Present, Future) implemented
     - Present: Subtle elevation shadows (0 2px 4px rgba(0,0,0,0.1))
     - Future: Glowing edges with variable opacity
 
-- **State Variations**
-
-  - Interactive Elements:
-    - Default state
-    - Hover state
-    - Active/Pressed state
-    - Focus state
-    - Disabled state
-  - Content Containers:
-    - Collapsed/Expanded states
-    - Loading states with era-appropriate indicators
-    - Error states with era-specific messaging
-
 - **Image and Asset Guidelines**
-  - Logo Treatments: Era-specific styling for company logos (from [resume](./resume.md))
+  - Logo Treatments: Era-specific styling for company logos (from [reference directory](../reference/))
   - Icon Sets: Custom icon system for each era
   - Image Filters: Era-appropriate processing (pixelated for Past, etc.)
   - Background Textures: Subtle patterns matching each era's aesthetic
@@ -290,8 +273,6 @@ The website will feature three distinct eras (Past, Present, Future) implemented
 - GPU-accelerated animations for smooth transitions (transform, opacity)
 - Optimized scroll performance with passive event listeners
 - Throttled scroll handlers to prevent performance issues
-- Social media integration (LinkedIn, Bluesky)
-- Accessibility considerations for keyboard navigation and screen readers
 
 ### Performance Targets
 
