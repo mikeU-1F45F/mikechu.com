@@ -32,14 +32,9 @@
 - Implement debouncing for scroll and resize event handlers
 - Follow progressive enhancement principles
 
-## Accessibility Requirements
-- Maintain WCAG 2.1 AA compliance throughout the site
-- Ensure keyboard navigation works for all interactive elements
-- Include proper ARIA roles, states, and properties
-- Support screen readers with appropriate announcements
-
 ## Development Workflow
+- If you need image assets, ask the user for it, including where to store it and an emoji for attention
 - Use the Deno development server for local testing
 - Always search the code base for existing functions, components, and styles before implementing new features
-- Use version control (Git) for collaboration and history tracking
+- Use version control (Git) for history tracking
 - Write conventional commit messages
