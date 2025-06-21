@@ -16,9 +16,9 @@
 ## Core Structure & Layout Implementation
 
 - [x] Implement vertical scrolling layout with "Past, Present, Future" sections with placeholder labels
-- [ ] Create smooth scroll-based navigation system
-  - [ ] Implement single continuous vertical scroll
-  - [ ] Develop scroll progress indicator
+- [x] Create smooth scroll-based navigation system
+  - [x] Implement single continuous vertical scroll
+  - [x] Develop scroll progress indicator
 - [ ] Design era transition mechanics
   - [ ] Implement 800-100ms transitions
   - [ ] Create custom cubic-bezier easing

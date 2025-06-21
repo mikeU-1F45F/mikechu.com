@@ -1,0 +1,347 @@
+/*
+ * Mike Chu Portfolio - Era Transitions CSS
+ * Styles for transitions between different eras and scroll-based animations
+ */
+
+/*
+ * ================================================
+ * ERA CONTAINER & SECTION STYLING
+ * ================================================
+ */
+
+.era-container {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.era {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-16) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: background-color var(--transition-slow) ease-out;
+}
+
+.era--past {
+    background-color: var(--era-bg-color);
+    color: var(--era-text-color);
+    font-family: var(--era-font-family);
+}
+
+.era--present {
+    background-color: var(--era-bg-color);
+    color: var(--era-text-color);
+    font-family: var(--era-font-family);
+}
+
+.era--future {
+    background-color: var(--era-bg-color);
+    color: var(--era-text-color);
+    font-family: var(--era-font-family);
+}
+
+.era--active {
+    z-index: var(--z-above);
+}
+
+/*
+ * ================================================
+ * ERA TRANSITION ZONES
+ * ================================================
+ */
+
+.era-transition {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: var(--z-above);
+}
+
+#transition-past-present {
+    background: linear-gradient(to bottom, #008080, #f0f0f0);
+}
+
+#transition-present-future {
+    background: linear-gradient(to bottom, #f0f0f0, #121212);
+}
+
+.transition-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+ * ================================================
+ * SCROLL NAVIGATION & PROGRESS
+ * ================================================
+ */
+
+.era-nav {
+    position: fixed;
+    top: var(--space-4);
+    left: var(--space-4);
+    z-index: var(--z-header);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: var(--space-2);
+    padding: var(--space-2);
+}
+
+.era-nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.era-nav__item {
+    position: relative;
+}
+
+.era-nav__link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: var(--space-2);
+    border-radius: var(--space-1);
+    transition: all var(--transition-medium) ease;
+    opacity: 0.7;
+    position: relative;
+}
+
+.era-nav__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform var(--transition-medium) ease;
+}
+
+.era-nav__link:hover,
+.era-nav__link:focus {
+    opacity: 1;
+}
+
+.era-nav__link:hover::after,
+.era-nav__link:focus::after {
+    transform: scaleX(1);
+}
+
+.era-nav__link--active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.era-nav__link--active::after {
+    transform: scaleX(1);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: var(--space-4);
+    width: 3px;
+    display: flex;
+    justify-content: center;
+    z-index: var(--z-header);
+}
+
+.scroll-progress__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--era-accent-color, white);
+    height: 0%;
+    transition: height 0.1s ease-out;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: var(--z-header);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top__icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.back-to-top__icon::before,
+.back-to-top__icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+}
+
+.back-to-top__icon::before {
+    width: 2px;
+    height: 12px;
+    transform: translate(-50%, -25%);
+}
+
+.back-to-top__icon::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+/*
+ * ================================================
+ * ACCESSIBILITY SUPPORT
+ * ================================================
+ */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: var(--z-top);
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/*
+ * ================================================
+ * TRANSITION ANIMATIONS
+ * ================================================
+ */
+
+/* Boot Sequence Animation */
+.boot-sequence {
+    width: 80%;
+    max-width: 500px;
+}
+
+.boot-sequence__progress {
+    height: 24px;
+    background-color: #000;
+    border: 2px solid #ccc;
+    margin-bottom: var(--space-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.boot-sequence__bar {
+    height: 100%;
+    width: 0%;
+    background-color: #00a;
+    transition: width 0.5s linear;
+}
+
+.boot-sequence__text {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    color: white;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+/* Digital Transformation */
+.digital-transformation {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.particle-system {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.transition-text {
+    color: white;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    font-size: 1.2rem;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(77, 238, 234, 0.8);
+}
+
+/*
+ * ================================================
+ * RESPONSIVE ADJUSTMENTS
+ * ================================================
+ */
+
+@media (max-width: 768px) {
+    .era-nav {
+        bottom: var(--space-4);
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .era-nav__list {
+        flex-direction: row;
+    }
+
+    .scroll-progress {
+        right: var(--space-2);
+    }
+}
+
+@media (max-height: 500px) {
+    .era {
+        min-height: 120vh;
+    }
+
+    .era-transition {
+        height: 30vh;
+    }
+}
