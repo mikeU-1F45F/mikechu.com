@@ -1,24 +1,21 @@
 # Mike Chu Portfolio Website Development Tasks
 
+**AI Assistant must:**
+
+- Read the [Technical Design Document](./technical_design.md) before proceeding.
+- Stop after after each task is completed and checked off
+- Offer a conventional commit message with succinct bulleted description for committing
+
 ## Project Setup & Foundation
 
 - [x] Set up project repository
 - [x] Configure static site hosting (Cloudflare Page)
 - [x] Set up local development environment using Deno file_server
 - [x] Create basic HTML structure with proper semantic markup
-- [ ] Set up CSS styling infrastructure with vanilla CSS
-  - [ ] Implement 12-column grid system (desktop)
-  - [ ] Create responsive grid using CSS Grid and Flexbox
-  - [ ] Define 4px spacing scale system
-  - [ ] Implement era-specific border radius (0px, 4-8px, 12-24px)
-- [ ] Create base typography system
-  - [ ] Set up typography variables for each era
-  - [ ] Implement responsive font scaling
-  - [ ] Define font stacks for each section
 
 ## Core Structure & Layout Implementation
 
-- [x] Implement vertical scrolling layout with "Past, Present, Future" sections
+- [x] Implement vertical scrolling layout with "Past, Present, Future" sections with placeholder labels
 - [ ] Create smooth scroll-based navigation system
   - [ ] Implement single continuous vertical scroll
   - [ ] Develop scroll progress indicator

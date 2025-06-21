@@ -1,14 +1,11 @@
 # Mike Chu Portfolio - AI Assistant Rules
 
-## Project Overview
-- Portfolio website for Mike Chu, a Staff Software Engineer
-- Showcases professional journey across three eras: past, present, and future
-- Built with vanilla HTML, CSS, and JavaScript for maximum performance
-- Hosted on Cloudflare Pages
+**AI Assistant**
+- Read the [Technical Design Document](docs/technical_design.md) before proceeding.
 
 ## Comments
-- Avoid adding internal / inline comments in all file types
-- Use descriptive function & variables names or otherwise semantic tags
+- Never use internal / inline comments in any code files eg no `<!-- -->` (html), `//` (js), nor `#` (python), etc.
+- Use descriptive names for functions, variables, methods, classes, etc. or use semantic tags
 - Use comments only for JavaScript where there are non-obvious decisions / concise solutions in place
 
 ## Code Style
