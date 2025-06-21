@@ -19,15 +19,6 @@
 - [x] Create smooth scroll-based navigation system
   - [x] Implement single continuous vertical scroll
   - [x] Develop scroll progress indicator
-- [ ] Design era transition mechanics
-  - [ ] Implement 800-100ms transitions
-  - [ ] Create custom cubic-bezier easing
-  - [ ] Add parallax scrolling effects
-  - [ ] Design transition zones between eras
-- [ ] Implement responsive design
-  - [ ] Develop touch-optimized interactions
-  - [ ] Implement viewport-height considerations
-  - [ ] Ensure WCAG 2.1 AA compliance
 
 ## "Past" Era (Windows 95) Implementation
 
@@ -133,10 +124,15 @@
 
 ## Advanced Interaction & Accessibility
 
-- [ ] Develop comprehensive navigation
-  - [ ] Implement global era jump controls via upper-left floating tiny menu
-  - [ ] Create deep linking elements including push state upon entering era
-  - [ ] Create back-to-top functionality
+- [ ] Design era transition mechanics
+  - [ ] Implement 800-100ms transitions
+  - [ ] Create custom cubic-bezier easing
+  - [ ] Add parallax scrolling effects
+  - [ ] Design transition zones between eras
+- [ ] Implement responsive design
+  - [ ] Develop touch-optimized interactions
+  - [ ] Implement viewport-height considerations
+  - [ ] Ensure WCAG 2.1 AA compliance
 - [ ] Create interactive elements
   - [ ] Develop content filtering
   - [ ] Implement dynamic personalization
