@@ -1,0 +1,45 @@
+# Mike Chu Portfolio - AI Assistant Rules
+
+## Project Overview
+- Portfolio website for Mike Chu, a Staff Software Engineer
+- Showcases professional journey across three eras: past, present, and future
+- Built with vanilla HTML, CSS, and JavaScript for maximum performance
+- Hosted on Cloudflare Pages
+
+## Comments
+- Avoid adding internal / inline comments in all file types
+- Use descriptive function & variables names or otherwise semantic tags
+- Use comments only for JavaScript where there are non-obvious decisions / concise solutions in place
+
+## Code Style
+- Use consistent indentation (4 spaces for HTML, 2 spaces for CSS/JS)
+- Follow camelCase naming for JavaScript variables and functions
+- Prefer CSS classes with BEM naming convention (block__element--modifier)
+- Keep functions small and focused on a single responsibility
+- Maintain semantic HTML structure with proper ARIA attributes
+
+## Architecture
+- The site uses an era-based navigation concept (past/present/future)
+- Main JavaScript functionality in `src/scripts/main.js`
+- Main CSS is in `src/styles/main.css`
+- Break out and import CSS modules, JavaScript scripts and HTML componentsfor better organization
+- No build process - files are served directly without bundling
+- Development server runs with Deno
+
+## Performance Guidelines
+- Minimize DOM manipulations and batch changes when possible
+- Use CSS transitions instead of JavaScript animations where feasible
+- Implement debouncing for scroll and resize event handlers
+- Follow progressive enhancement principles
+
+## Accessibility Requirements
+- Maintain WCAG 2.1 AA compliance throughout the site
+- Ensure keyboard navigation works for all interactive elements
+- Include proper ARIA roles, states, and properties
+- Support screen readers with appropriate announcements
+
+## Development Workflow
+- Use the Deno development server for local testing
+- Always search the code base for existing functions, components, and styles before implementing new features
+- Use version control (Git) for collaboration and history tracking
+- Write conventional commit messages
